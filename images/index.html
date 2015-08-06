@@ -1,0 +1,564 @@
+
+<!doctype html>
+<html class="no-js" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DLSU HackerCup 2014</title>
+  <!-- build:css css/libraries.min.css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css css/app.min.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app_override.css">
+  <!-- endbuild -->
+  <!-- build:js js/vendor/modernizr.min.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#00a300">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+</head>
+<body>
+
+
+  <div class="off-canvas-wrap" data-offcanvas>
+    <div class="inner-wrap">
+
+      <!-- Navigation -->
+      <div data-magellan-expedition class="no-padding sticky">
+        <nav class="top-bar text-center f" data-topbar role="navigation">
+          <ul class="inline-list hide-for-medium-down">
+            <li><dd data-magellan-arrival="about"><a href="#about">About</a></dd></li>            
+            <!-- <li><dd data-magellan-arrival="prizes"><a href="#prizes">Prizes</a></dd></li> -->
+            <li><dd data-magellan-arrival="venue"><a href="#venue">Venue</a></dd></li>
+            <li><dd data-magellan-arrival="schedule"><a href="#schedule">Schedule</a></dd></li>            
+            <li><dd data-magellan-arrival="join"><a href="#join">How do I join?</a></dd></li>
+            <li><dd data-magellan-arrival="mechanics"><a href="#mechanics">Mechanics</a></dd></li>
+            <li><dd data-magellan-arrival="criteria"><a href="#criteria">Criteria</a></dd></li>
+			<li><dd data-magellan-arrival="sponsors"><a href="#sponsors">Sponsors</a></dd></li> 
+          </ul>
+
+          <!-- Mobile 'Menu' button -->
+          <ul class="show-for-medium-down">
+            <li><a class="left-off-canvas-toggle menu-button" href="#" ><i class="fa fa-bars"></i></a></li>
+          </ul>
+
+          <!-- Join now button -->
+          <ul class="inline-list">
+            <li><a class="join-button" href="http://dlsuhackercup.eventbrite.com" target="_new">Join Now!</a></li>
+          </ul>
+        </div>
+
+
+        <!-- Off Canvas Menu -->
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><a href="#about">About</a></li>    
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#schedule">Schedule</a></li>            
+            <li><a href="#join">How do I join?</a></li>
+            <li><a href="#mechanics">Mechanics</a></li>
+            <li><a href="#criteria">Criteria</a></li>
+			<li><a href="#sponsors">Sponsors</a></li>
+          </ul>
+        </aside>
+
+        <!-- main content goes here -->
+        <!-- Hero -->
+        <div class="hero">
+          <div class="row">
+            <div class="large-12 text-center columns">
+              <!-- Hero text, I got lazy so I used an image :D -->
+              <h1 class="hide">DLSU Hacker Cup 2014</h1>
+              <img  data-magellan-destination="about" class="hero-header" data-interchange="[images/hero_header.png, (default)], [images/hero_header@2x.png, (retina)]">
+              <noscript><img src="images/hero_header.png"></noscript>
+              <!-- Sublime mockup -->
+              <img class="hero-sublime" data-interchange="[images/hero_sublime.png, (default)], [images/hero_sublime@2x.png, (retina)]">
+              <noscript><img src="images/hero_sublime.png"></noscript>
+
+            </div>
+          </div>    
+        </div>
+
+        <!-- ABOUT section -->
+        <div class="section about">
+          <div class="row">
+            <div class="large-12 columns text-center">
+              <a id="about" name="about"></a>
+              <h2 data-magellan-destination="venue">About</h2>
+              <h4>The DLSU Hackercup, now on it's third year, is an annual hackathon for DLSU students. This year's Hackercup, which will take place on November 15-16, 2014, is about creating projects that can impact society positively. </h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- VENUE section -->
+        <div class="section venue">
+          <iframe id="google-map" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/view?zoom=17&amp;center=14.5649,120.9939&amp;key=AIzaSyClqpmV-uWlqpivfumyzFA8NuRRnpr8BLU">
+        </iframe>
+        <div class="row">
+          <div class="map-text large-12 columns text-center">
+            <a id="venue" name="venue"></a>
+            <h2 data-magellan-destination="schedule"><a href="https://www.google.com.ph/maps/place/De+La+Salle+University/@14.564921,120.993947,17z/data=!3m1!4b1!4m2!3m1!1s0x3397c97f2ea0318b:0x8e8eae0957d17c38?hl=en" target="_blank">Venue</a></h2>
+            <p><a target="_blank" href="https://www.google.com.ph/maps/place/De+La+Salle+University/@14.564921,120.993947,17z/data=!3m1!4b1!4m2!3m1!1s0x3397c97f2ea0318b:0x8e8eae0957d17c38?hl=en">Click here to view in Google Maps</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="map-text large-12 columns text-center">
+            <h3>De La Salle University</h3>
+            <h3>2401 Taft Avenue Manila</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCHECULE section -->
+      <div class="section schedule">
+        <div class="row">
+          <div class="large-12 columns text-center">
+            <a id="schedule" name="schedule"></a>
+            <h2>Schedule</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-offset-2 large-10 columns text-left">
+            <h3>October 23</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-offset-2 large-offset-0 large-2 columns time">5:00PM</div>
+          <div class="large-10 columns ">
+            <div class="small-2 columns text-center">
+              <i class="icon river fa fa-bullhorn"></i>
+            </div>
+            <div class="small-10 text-left columns agenda">
+              <h4>Project Proposal Submission Deadline (by DLSU professors and offices)</h4>
+              <p>Fill up the form here: 
+			  <a target="_blank" href="http://bit.ly/HackercupProjectProposals">bit.ly/HackercupProjectProposals</a>. Project proposals will be screened, so stay tuned for results!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-offset-2 large-10 columns text-left">
+            <h3>November 12</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-offset-2 large-offset-0 large-2 columns time">5:00PM</div>
+          <div class="large-10 columns ">
+            <div class="small-2 columns text-center">
+              <i class="icon alizarin fa fa-book"></i>
+            </div>
+            <div class="small-10 text-left columns agenda">
+              <h4>Student Team Registration Deadline</h4>
+              <p>Form a team of up to 4 members and register before November 12, 2014 to reserve a slot for your group! <a target="_blank" href="http://dlsuhackercup.eventbrite.com">Click here</a> to register.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-offset-2 large-10 columns text-left">
+            <h3>November 15</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-offset-2 large-offset-0 large-2 columns time">10:00AM</div>
+          <div class="large-10 columns ">
+            <div class="small-2 columns text-center">
+              <i class="icon sun fa fa-star"></i>
+            </div>
+            <div class="small-10 text-left columns agenda">
+              <h4>Start of HackerCup2014</h4>
+              <p>Projected schedule of events that would take place in the actual Hackaton will be released soon! Hacking will go on until the next day. Students are not allowed to leave the venue.</p>
+              <p>
+                <ul>
+                  <li> Applications may be assembled using any application frameworks and development tools. Participants are expected to bring the necessary tools to build their competition entry.
+                  </li>
+                  <li>Application must be built during the entire duration of the contest. Teams are given 25 hours (from 1:30pm of November 15 until 2:00pm of November 16) to finish their entries.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-offset-2 large-10 columns text-left">
+            <h3>November 16</h3>
+          </div>
+        </div>
+
+        <!-- FILLER-->
+        <div class="row"><div class="small-offset-2 large-offset-0 large-2 columns time"></div><div class="large-10 columns "><div class="small-2 columns text-center"></div><div class="small-10 text-left columns agenda"></div></div></div>
+
+
+
+        <!-- end of hacker cup -->
+        <div class="row">
+          <div class="small-offset-2 large-offset-0 large-2 columns time">6:00PM</div>
+          <div class="large-10 columns ">
+            <div class="small-2 columns text-center">
+              <i class="icon river fa fa-sign-out"></i>
+            </div>
+            <div class="small-10 text-left columns agenda last">
+              <h4 data-magellan-destination="join">End of HackerCup 2014</h4>
+              <p>
+                  Note that this is the projected end. Time could change due to any event or circumstance that may arise during the whole event. All decisions of judges are final. Scores will not be made public.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- HERO 2 -->
+      <div class="hero2">
+        <div class="row">
+          <div class="large-12 text-center columns">
+            <!-- Hero text, I got lazy so I used an image :D -->
+            <h1 class="hide">DLSU Hacker Cup 2014</h1>
+            <img class="hero-sublime" data-interchange="[images/hero2_sublime.png, (default)], [images/hero2_sublime@2x.png, (retina)]">
+            <noscript><img src="images/hero2_sublime.png"></noscript>
+
+          </div>
+        </div> 
+      </div>
+
+      <!-- HOW DO I JOIN section -->
+      <div class="section join">
+        <div class="row">
+          <div class="large-12 columns text-center">
+            <a id="join" name="join"></a>
+            <h2 data-magellan-destination="mechanics">How do I Join?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 columns">
+            <h3>Students</h3>
+            <p>DLSU students, this is a great chance to create meaningful projects. Form a team of up to 4 members and register before November 12, 2014 to reserve a slot for your group!  <a target="_blank" href="http://dlsuhackercup.eventbrite.com">Click here</a> to register.</p>
+          </div>
+          <div class="large-6 columns">
+            <h3>DLSU professors and offices</h3>
+            <p>We are inviting you to participate in this event by submitting project ideas that you would like to see happen! Fill up the form here: <a href="http://bit.ly/HackercupProjectProposals" target="_blank">bit.ly/HackercupProjectProposals</a>. Project proposals will be screened, so stay tuned for results! </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MECHANICS section -->
+      <div class="section rules-and-regulations mechanics">
+        <div class="row">
+          <div class="large-12 columns text-center">
+            <a id="mechanics" name="mechanics"></a>
+            <h2 data-magellan-destination="criteria">Mechanics</h2>
+          </div>
+        </div>
+
+        <div class="row">
+
+         <!-- eligibility -->
+         <div class="large-6 columns">
+          <h3>Eligibility</h3>
+          <ol>
+            <li>
+              <p>The DLSU Hacker Cup is open to currently enrolled undergraduate students of DLSU (Manila and S&amp;T Campus).</p>
+            </li>
+            <li>
+              <p> Only registered and validated participants will be allowed to participate in the contest. Walk-ins will not be permitted to join. Registration ends on November 12, 2014. Validation will be sent through e-mail.</p>
+            </li>
+            <li>
+              <p>There must be a project manager, designer and developer.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="large-6 columns">
+          <!-- procedure -->
+          <h3>Procedure</h3>
+          <ol>
+            <li>
+              <p>Teams will develop a mobile or web application on any platform depending on the project they wish to pursue. The list of available projects will be released on the event date (November 15, 2014).</p>
+            </li>
+            <li>
+              <p>There will be mentors during the event who may be consulted. Applications may be assembled using any application frameworks and development tools. Participants are expected to bring the necessary tools to build their competition entry.</p>
+            </li>
+            <li>
+              <p>Application must be built during the entire duration of the contest. Teams are given 25 hours (from 1:30pm of November 15 until 2:00pm of November 16) to finish their entries.</p>
+            </li>
+            <li>
+              <p>Teams will undergo final judging by presenting their project to a panel of judges who will identify the top three winners.</p>
+            </li>
+            <li>
+             <p>All decisions of judges are final. Scores will not be made public</p>
+           </li>
+           <li>
+             <p>All participants are encouraged to maintain communication with their project mentor(s) and continue their projects even after the hackathon.</p>
+           </li>
+           <li>
+             <p>Professors whose ideas are accepted for the hackathon are committing to be there at the event.
+             </p>
+           </li>
+         </ol>
+       </div>
+
+     </div>
+   </div>
+
+
+   <!-- criteria -->
+   <div class="section criteria">
+    <div class="row">
+      <div class="large-12 columns text-center">
+        <a id="criteria" name="criteria"></a>
+        <h2 data-magellan-destination="sponsors">Criteria</h2>
+        <p>Teams will undergo final judging by presenting their project to a panel of judges who will identify the top three winners. <br/>The organizers reserve the right to change the criteria at any point in time prior to the competition.</p>
+      </div>
+    </div>
+    <div class="row spacing">
+      <div id="canvas-holder" class="large-6 medium-6 columns">
+        <canvas id="chart-area" height="230px"/>
+      </div>
+      <div class="large-6 medium-6 columns">
+
+        <div class="row">
+          <div class="small-2 columns text-right">
+            <span class="legend alizarin">20%</span>
+          </div>
+          <div class="small-10 columns">
+            <h5>Functionality</h5>
+            <p>Completeness of the app they presented.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-2 columns text-right">
+            <span class="legend river">20%</span>
+          </div>
+          <div class="small-10 columns">
+            <h5>Usability</h5>
+            <p>App's UI/UX.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-2 columns text-right">
+            <span class="legend carrot">20%</span>
+          </div>
+          <div class="small-10 columns">
+            <h5>Creativity</h5>
+            <p>App's uniqueness and appropriateness.</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="small-2 columns text-right">
+            <span class="legend emerald">20%</span>
+          </div>
+          <div class="small-10 columns">
+            <h5>Feasibility/Sustainability/Deployability</h5>
+            <p>Readiness of the app.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-2 columns text-right">
+            <span class="legend sun">20%</span>
+          </div>
+          <div class="small-10 columns">
+            <h5> Impact</h5>
+            <p>Overall impact of app to society / campus / project</p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+    <div class="section sponsors">
+      <a id="sponsors" name="sponsors"></a>
+      <div class="row">
+        <div class="large-12 text-center columns">
+          <h2>Sponsors and Partners</h2>
+          <p>DLSU HackerCup2014 will not be possible without the help of our sponsors. <a href="https://docs.google.com/forms/d/1G9WJUFwQMZYqCgH4McJT31MuCxtdMtzZZFRku4wnxhw/viewform" target="_new">Click here</a> if you're interested to be part of our event.</p>
+        </div>
+      </div>
+	  <div class="row">
+        <div class="large-12 columns text-center">
+			<h4>Co-Sponsors</h4>
+          <img data-interchange="[images/s_elance.png, (default)], [images/s_elance@2x.png, (retina)]">
+          <noscript><img src="images/s_elance.png"></noscript>
+
+        </div>
+      </div>
+	  <div class="row">
+        <div class="large-12 columns text-center">
+			<h4>Major Sponsors</h4>
+          <img data-interchange="[images/s_indinero.png, (default)], [images/s_indinero@2x.png, (retina)]">
+          <noscript><img src="images/s_indinero.png"></noscript>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns text-center">
+			<h4>Contributing Partners</h4>
+          <img data-interchange="[images/s_balsamiq.png, (default)], [images/s_balsamiq@2x.png, (retina)]">
+          <noscript><img src="images/s_balsamiq.png"></noscript>
+
+		  <img data-interchange="[images/s_firefox.png, (default)], [images/s_firefox@2x.png, (retina)]">
+          <noscript><img src="images/s_firefox.png"></noscript>
+		  
+		  <img data-interchange="[images/s_gdgph.png, (default)], [images/s_gdgph@2x.png, (retina)]">
+          <noscript><img src="images/s_gdgph.png"></noscript>
+        </div>
+      </div>
+	  <div class="row">
+        <div class="large-12 columns text-center">  
+          <img data-interchange="[images/s_github.png, (default)], [images/s_github@2x.png, (retina)]">
+          <noscript><img src="images/s_github.png"></noscript>
+		  
+		  <img data-interchange="[images/s_microsoft.png, (default)], [images/s_microsoft@2x.png, (retina)]">
+          <noscript><img src="images/s_microsoft.png"></noscript>
+
+        </div>
+      </div>
+	  <div class="row">
+        <div class="large-12 columns text-center">
+			<h4>Media Partners</h4>
+          <img data-interchange="[images/s_webgeek.png, (default)], [images/s_webgeek@2x.png, (retina)]">
+          <noscript><img src="images/s_webgeek.png"></noscript>
+
+        </div>
+      </div>
+    </div> 
+
+    <div class="section footer">
+      <div class="row">
+        <div class="large-12 columns text-center">
+          <img data-interchange="[images/hero3_sublime.png, (default)], [images/hero3_sublime@2x.png, (retina)]">
+          <noscript><img src="images/hero3_sublime.png"></noscript>
+
+          <h2>Join DLSU HackerCup2014 Now!</h2>
+          <p>Slots are limited, so grab them while they're still available!</p>
+          <a href="http://dlsuhackercup.eventbrite.com" target="_new" class="button call-to-action"><i class="fa fa-star"></i> Join Now!</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 columns text-center large-centered footer-text">
+          <a href="#">Back to Top</a> | DLSU HackerCup 2014 website was designed and created by <a href="https://twitter.com/olssoneerz">Kevin Olsson</a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- close the off-canvas menu -->
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+
+
+
+
+<!-- build:js js/vendor/libraries.min.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js js/vendor/foundation.min.js -->
+<script src="bower_components/foundation/js/foundation/foundation.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+<script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+<!-- endbuild -->
+<!-- build:js js/app.min.js -->
+<script src="js/app.js"></script>
+<script src="js/Chart.js"></script>
+<!-- endbuild -->
+<script>
+  $(document).foundation({
+    offcanvas : {
+      open_method: 'move', 
+      close_on_click : true
+    }
+  });
+</script>
+<script>
+  var doughnutData = [
+  {
+    value: 20,
+    color:"#E74C3C",
+    highlight: "#fd4e3e",
+    label: "Functionality"
+  },
+  {
+    value: 20,
+    color: "#3498DB",
+    highlight: "#3aaaf4",
+    label: "Usability"
+  },
+  {
+    value: 20,
+    color: "#E67E22",
+    highlight: "#fd8b26",
+    label: "Creativity"
+  },
+  {
+    value: 20,
+    color: "#2ECC71",
+    highlight: "#36e580",
+    label: "Feasibility/Sustainability/Deployability"
+  },
+  {
+    value: 20,
+    color: "#F1C40F",
+    highlight: "#ffd736",
+    label: "Impact"
+  },
+  ];
+
+  window.onload = function(){
+    var ctx = document.getElementById("chart-area").getContext("2d");
+    window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+  };
+</script>
+</body>
+</html>
