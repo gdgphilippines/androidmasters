@@ -8055,6 +8055,7 @@ nav {
   padding-top: 30px; }
 
 .card-content p {
-  padding-top: 20px; }
+  padding-top: 20px;
+  text-align:justify; }
 
 /*# sourceMappingURL=materialize.css.map */
