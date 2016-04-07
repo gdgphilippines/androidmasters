@@ -249,6 +249,11 @@ a.menu {
 	display: none;
 }
 @media only screen and (max-width: 480px) {
+	section[name="footer"] [class^="col-"] {
+		width: 100% !important;
+		text-align: center !important;
+		padding: 10px 0px;
+	}
 	.logo-container {
 		margin-right: 0px;
 	}
