@@ -32,6 +32,41 @@ body > .container section > .wrapper {
 	position: relative;
 	padding: 20px 0px;
 }
+.slider {
+	max-width: 300px;
+	width: 300px;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: -300px;
+	z-index: 10;
+	background: white;
+}
+.slider .title {
+	width: 100%;
+	display: block;
+	padding: 12px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.slider .back {
+	vertical-align: middle;
+	margin-right: 10px;
+	display: inline-block;
+}
+.slider ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+.slider ul li {
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.slider ul li a {
+	display: block;
+	padding: 18px 18px;
+}
 .action-bar {
 	width: 100%;
 	position: fixed;
@@ -206,11 +241,25 @@ ul.mechanics li {
 	word-wrap: break-word;
 	display: none;
 }
+a.menu {
+	opacity: .6;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 10px;
+	display: none;
+}
 @media only screen and (max-width: 480px) {
 	.logo-container {
 		margin-right: 0px;
 	}
 	section img {
 		width: 100%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.faqs-list {
+		width: 100% !important;
+		margin-left: 0px !important;
+		border-radius: 0px;
 	}
 }
