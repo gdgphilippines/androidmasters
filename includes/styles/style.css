@@ -249,6 +249,20 @@ a.menu {
 	margin-right: 10px;
 	display: none;
 }
+table.dates {
+	width: 100%;
+}
+table.dates td {
+	padding: 15px;
+}
+table.dates tr td:first-child {
+	text-align: right;
+	font-weight: bold;
+	color: #444;
+}
+table.dates tr td:last-child {
+	text-align: left;
+}
 @media only screen and (max-width: 480px) {
 	section[name="footer"] [class^="col-"] {
 		width: 100% !important;
