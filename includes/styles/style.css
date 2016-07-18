@@ -31,6 +31,7 @@ body > .container section > .wrapper {
 	overflow: hidden;
 	position: relative;
 	padding: 20px 0px;
+	padding-bottom: 60px;
 }
 .slider {
 	max-width: 300px;
@@ -263,6 +264,18 @@ table.dates tr td:first-child {
 table.dates tr td:last-child {
 	text-align: left;
 }
+b.cashprize {
+	font-size: 60px;
+	color: #8ec63f;
+	display: block;
+}
+@media only screen and (max-width: 600px) {
+	.faqs-list {
+		width: 100% !important;
+		margin-left: 0px !important;
+		border-radius: 0px;
+	}
+}
 @media only screen and (max-width: 480px) {
 	section[name="footer"] [class^="col-"] {
 		width: 100% !important;
@@ -272,14 +285,20 @@ table.dates tr td:last-child {
 	.logo-container {
 		margin-right: 0px;
 	}
-	section img {
+	section[name="2015"] img {
 		width: 100%;
 	}
-}
-@media only screen and (max-width: 600px) {
-	.faqs-list {
+	section[name="about"] .col-4, section[name="prize"] .col-4 {
 		width: 100% !important;
 		margin-left: 0px !important;
-		border-radius: 0px;
+		padding-bottom: 50px;
+	}
+	section[name="about"] .col-4 img {
+		width: 40%;
+	}
+}
+@media only screen and (max-width: 385px) {
+	.cashprize {
+		font-size: 48px !important;
 	}
 }
