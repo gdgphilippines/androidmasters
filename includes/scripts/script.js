@@ -1,11 +1,12 @@
 var logo, label, nav;
 function responsive() {
 	$parent = $(".action-bar");
-	if(logo+nav+30 > $parent.outerWidth() - $parent.children(".register").outerWidth()) {
+	$register = ($parent.children(".register").length == 0) ? 0 : $parent.children(".register").outerWidth();
+	if(logo+nav+110 > $parent.outerWidth() - $register) {
 		$parent.find("ul").hide();
 		$parent.find("#logo .label").hide();
 		$parent.find(".menu").css("display", "inline-block");
-	} else if(logo+label+nav+30 > $parent.outerWidth() - $parent.children(".register").outerWidth()) {
+	} else if(logo+label+nav+110 > $parent.outerWidth() - $register) {
 		$parent.find("ul").show();
 		$parent.find("#logo .label").hide();
 		$parent.find("#logo").css("margin-right", "10px");
@@ -15,6 +16,7 @@ function responsive() {
 		$parent.find("#logo").css("margin-right", "30px");
 		$parent.find(".menu").hide();
 	}
+		console.log(logo+label+nav+30 + " > " + ($parent.outerWidth() - $register));
 	$(".container").css("margin-top", $parent.outerHeight());
 	$(".button").each(function() {
 		if($(this).find("i.icon").length == 0) 

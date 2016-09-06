@@ -165,6 +165,10 @@ section[name="footer"] {
 	color: rgba(255,255,255,.3);
 	font-size: 13px;
 }
+section[name="footer"] .wrapper {
+	padding-left: 24px !important;
+	padding-right: 24px !important;
+}
 section[name="footer"] img {
 	vertical-align: middle;
 	width: 130px;

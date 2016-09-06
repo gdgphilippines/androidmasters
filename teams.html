@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="includes/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="includes/scripts/smooth_scroll.js"></script>
+	<script src="http://code.vostrel.cz/jquery.reel.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Android Masters 2016" />
+	<meta property="og:url" content="http://androidmasters.gdgph.org/" />
+	<meta property="og:site_name" content="Android Masters 2016" />
+	<meta property="og:image" content="includes/images/stage.jpg" />
+	<meta name="twitter:site" content="@gdgphilippines" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="theme-color" content="#8ec63f">
+	<link rel="stylesheet" href="includes/styles/m.css">
+	<link rel="stylesheet" href="includes/styles/style.css">
+	<title>Android Masters 2016</title>
+</head>
+<body>
+<div class="action-bar">
+	<span id="logo" class="logo-container"><a class="menu"><i class="icon menu_black"></i></a><a href="" class="logo"></a><span class="label">Android Masters 2016</span></span>
+	<ul>
+		<li><a href="index.html#about">About</a></li>
+		<li><a href="index.html#mechanics">Mechanics</a></li>
+		<li><a href="teams.html">Teams</a></li>
+		<li><a href="index.html#2015">2015</a></li>
+	</ul>
+	<!-- <a href="https://docs.google.com/forms/d/1SD4kRaOMXm-MI0i1hdfN68SBwL5eKSsrK8CPA5OV_4g/viewform" target="_blank" class="register">Register Team</a> -->
+</div>
+<div class="slider">
+	<div class="title"><a class="back"><i class="icon arrow-left_black icon_28"></i></a>Main Menu</div>
+	<ul>
+		<li><a href="index.html#about">About</a></li>
+		<li><a href="index.html#mechanics">Mechanics</a></li>
+		<li><a href="teams.html">Teams</a></li>
+		<li><a href="index.html#2015">2015</a></li>
+	</ul>
+</div>
+<div class="container">
+	<section name="cover">
+		<div class="tint"></div>
+		<div class="wrapper">
+			<div class="col-4 offset-4 table" style="height: 500px">
+				<span class="cell middle"><center><img src="includes/images/logo-large.png" width="100%" /></center></span>
+			</div>
+		</div>
+	</section>
+	<section class="color" name="team">
+		<div class="wrapper">
+			<div class="column-container col-12">
+				<div class="col-12 center">
+					<span class="title">Teams</span>
+					<p style="font-size: 1.4em; font-weight: 300;">Here are the list of registered teams from what school and their app name.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="wrapper">
+			<div class="column-container col-12">
+				<div class="col-12 center">
+					<table width="100%" cellpadding="12px" id="tblTeams">
+						<tr>
+							<td>1</td>
+							<td>#PRO</td>
+							<td>Gordon College</td>
+							<td>EMA: Election and Monitoring Application</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		var teams = [["#PRO", "Gordon College", "EMA: Election and Monitoring Application"],
+["`No_0ne", "UP Cebu", "Opps"],
+["ADB PRO", "DLSUD", "Oppah"],
+["ALT", "Arellano University , Andres Bonifacio Campus", "Class Management Tool"],
+["Amade Concepts", "University of the Philippines Visayas", "Trike To Go"],
+["APC_1DerPul", "Asia Pacific College", "JUAN-derpul"],
+["APC_Animalandia", "Asia Pacific College", "Animalandia"],
+["APC_AntiQ", "Asia Pacific College", "Anti-Quake!"],
+["APC_BEFIT", "Asia Pacific College", "BEFIT"],
+["APC_Caution", "Asia Pacific College", "ProCaution"],
+["APC_CODEDengue", "Asia Pacific College", "CODEngue"],
+["APC_DChore", "Asia Pacific College", "Daily Chore"],
+["APC_DIABEATS", "Asia Pacific College", "DI.A.BEATS"],
+["APC_DoDZoo", "Asia Pacific College", "Do the Zoo"],
+["APC_DOTDOT", "Asia Pacific College", "Keep Digging -> Dot Dot"],
+["APC_DRILLNOT", "Asia Pacific College", "This is not a drill"],
+["APC_Drnk", "Asia Pacific College", "DRnNK"],
+["APC_Drown", "Asia Pacific College", "Drown"],
+["APC_ESpecies", "Asia Pacific College", "E-Species"],
+["APC_Feeder", "Asia Pacific College", "Feeder"],
+["APC_FlyEagle", "Asia Pacific College", "Fly EAGLE Fly!"],
+["APC_Germocyde", "Asia Pacific College", "Germocyde"],
+["APC_GF", "Asia Pacific College", "Get Flooodin"],
+["APC_GreenyDroid", "Asia Pacific College", "GreenyDroid"],
+["APC_Guardian", "Asia Pacific College", "Philippine Guardians"],
+["APC_Halp", "Asia Pacific College", "Halp"],
+["APC_HappyEagle", "Asia Pacific College", "Happy  Eagle"],
+["APC_Haribon", "Asia Pacific College", "Haribon"],
+["APC_Haunted", "Asia Pacific College", "PH Haunted"],
+["APC_HouseRental", "Asia Pacific College", "House Rental App"],
+["APC_Iana", "Asia Pacific College", "Iana’s Void"],
+["APC_Invaded", "Asia Pacific College", "Invaded"],
+["APC_Juan", "Asia Pacific College", "Project Juan"],
+["APC_Kalye90", "Asia Pacific College", "Kalye 90's"],
+["APC_Kitty", "Asia Pacific College", "Pack MY Kit-Ty"],
+["APC_Lion", "Asia Pacific College", "Lion Escape"],
+["APC_Logish", "Asia Pacific College", "Logish"],
+["APC_Maria", "Asia Pacific College", "Maria"],
+["APC_Matanglawin", "Asia Pacific College", "Matanglawin Overwatch"],
+["APC_MEDCOMPANION", "Asia Pacific College", "MED Companion"],
+["APC_MT", "Asia Pacific College", "Minutes Trapped"],
+["APC_Pakekojan", "Asia Pacific College", "Pakeko Jan"],
+["APC_PHAnimonGo", "Asia Pacific College", "PHAnimon Go"],
+["APC_PM", "Asia Pacific College", "Protect Me"],
+["APC_PP", "Asia Pacific College", "Protect Philippines"],
+["APC_Replenish", "Asia Pacific College", "Replenish"],
+["APC_RUSA", "Asia Pacific College", "Rusa"],
+["APC_SAFU", "Asia Pacific College", "SAF-U"],
+["APC_SCARE", "Asia Pacific College", "Scareraphy"],
+["APC_SPRKNLR", "Asia Pacific College", "SPRNKLR: Water Plan System"],
+["APC_TRush", "Asia Pacific College", "Tropical Rush"],
+["APC_WildLife", "Asia Pacific College", "Wildlife"],
+["apKLL", "Kolehiyo ng Lungsod ng Lipa", "Driving Master"],
+["apKLL", "Kolehiyo ng Lungsod ng Lipa", "EDSA RUSH"],
+["apKll", "Kolehiyo ng Lungsod ng Lipa", "Sleep-UBER"],
+["apKll", "Kolehiyo ng Lungsod ng Lipa", "ROR Browser"],
+["apKll", "Kolehiyo ng Lungsod ng Lipa", "ROR mp3 Player"],
+["apKll", "Kolehiyo ng Lungsod Lipa", "ROR Voice Location Reminder"],
+["apKll", "kolehiyo ng Lungsod ng Lipa", "ROR Keyboard"],
+["apKll", "Kolehiyo ng Lungsod ng Lipa", "ROR Password"],
+["Balisong", "Batangas State University", "Payall"],
+["Beyond the Boundary", "Our Lady of Fatima University", "Vision"],
+["Big T", "De La Salle University", "Loot"],
+["BMC", "Bukidnon State University (BukSU)", "Contraceptive"],
+["Bored Games", "University of the Philippines Los Baños", "Crime Clash"],
+["BorroWise", "De La Salle University-Manila", "BorroWise"],
+["CB.Gizmo", "STI College Zamboanga", "JotShot"],
+["Ceberus", "Polytechnic University of the Philippines", "XYZ Anti Spam"],
+["DMC_WOLVES", "DMC College Foundation, Inc.", "History Wars"],
+["El Verde Trio", "University of St. La Salle", "medical.ly"],
+["eTeam", "Lyceum of the Philippines University Cavite", "Defense of the Oiland"],
+["Filipinnovators", "University of the Philippines - Diliman", "Filipinnovation (can be changed)"],
+["Filipino Caffeine Pushers", "University of the Philippines - Diliman", "Cards Against Filipinos"],
+["formona", "CIIT college of arts and technology", "Archaeoceti"],
+["getVamped", "De La Salle University - Dasmarinas", "Vampirism"],
+["GG Games", "De La Salle University - Dasmarinas", "Monstropolis"],
+["GIL Games", "De La Salle University - Dasmariñas", "Destructopus!"],
+["Hala Napundi", "De La Salle Universty", "Lights Out"],
+["HexDev", "Batangas State University Malvar ", "Interview App"],
+["Homunculus", "Polytechnic University of the Phiippines - Paranaque city Campus", "Decide!"],
+["InfoSysTeam", "NTC Education Batangas", "The Life of Bhesss"],
+["Inhumans", "Philippines", "MenuDo"],
+["Inhumans", "University of the Philippines Visayas", "Peryodiko"],
+["Inhumans", "University of the Philippines Visayas", "FiTipid"],
+["Inhumans", "University of the Philippines Visayas", "Be Informed!"],
+["Inhumans", "University of the Philippines Visayas", "Lazy Notes"],
+["Inhumans", "University of the Philippines Visayas", "Height Calculator"],
+["Inhumans", "University of the Philippines Visayas", "Equasy"],
+["Inhumans", "University of the Philippines Visayas", "BioTa"],
+["Inhumans", "University of the Philippines Visayas", "RentIt"],
+["Inhumans", "University of the Philippines Visayas", "Attendance Sheet"],
+["Inhumans", "University of the Philippines Visayas", "Batas"],
+["Inhumans", "University of the Philippines Visayas", "MediPocket"],
+["Jaguar Bytecoders", "University of the Cordilleras", "Phil Govt One Stop App"],
+["Jaguar Bytecoders", "University of the Cordilleras", "911"],
+["Jaguar Complexifiers", "University of the Cordilleras", "8888"],
+["Jaguar Complexifiers", "University of the Cordilleras", "Road Buddy"],
+["Jaguar Tech - Pyxle", "University of the Cordilleras", "InstaMath"],
+["Jaguar Tech - Pyxle", "University of the Cordilleras", "Bagel Rush"],
+["Jaguar Techno Tycoons", "University of the Cordilleras", "Grab Laundry"],
+["Jaguar Techno Tycoons", "University of the Cordilleras", "Off"],
+["JaguarTech Almiwouch", "University of Cordilleras", "E-RX"],
+["JaguarTechnopedia", "University of the Cordilleras", "DropLett"],
+["Jewmadex", "Palawan State University", "NarraTalk"],
+["K POP (KLL Players Of Programs)", "Kolehiyo ng Lungsod ng Lipa", "Brain Out"],
+["kdb", "world citi college ", "CHAT-U"],
+["Keyboard Cowboys", "Central Mindanao University", "Farmer Helper"],
+["KKB", "MFI Foundation Inc.", "AnoMali"],
+["Kusineros", "Jose Rizal Memorial State University", "Kusinang Pinoy"],
+["Lindol Busters", "Jose Rizal Memorial State University", "Shake the Quake"],
+["Logic", "STI College Zamboanga", "PocketHajj"],
+["Macchiato Shot", "Jose Rizal Memorial State University", "Dapitan Adventure"],
+["Metaverse", "University of the Philippines Diliman", "To Be Announced"],
+["MiAnMar", "Gordon College", "Ding!"],
+["MinDroid Innovations", "STI College Zamboanga", "MySchoolBuddy"],
+["MMTP Team", "WCC", "All in Juan"],
+["MojoPuff", "University of Baguio", "Physics Simulator"],
+["MojoPuff", "University of Baguio", "Slide Alert"],
+["MojoPuff", "University of Baguio", "bloxIt!"],
+["Mr.iT", "Our Lady of Fatima University - Antipolo Campus", "FLAPP"],
+["Navigator", "De La Salle University - Dasmariñas", "Finding Mommy"],
+["Nidoh and Friends", "Jose Rizal Memorial State University", "JRMSU Attendance App"],
+["Noodle Think Tank", "University of the Cordilleras", "Math Sieger"],
+["Notturno", "National University", "TaymisApp"],
+["Notturno", "National University", "E-ngat"],
+["Oreo Trio", "Asia Pacific College", "Halp+"],
+["Pak Ganern", "PUP Paranaque", "Automatic Schedule Reminder"],
+["Pak Ganern", "PUP Paranaque", "Smash the bash"],
+["Pak Ganern", "Polytechnic University of the Philippines Paranaque City Campus", "E-Dama X"],
+["PAMTech", "Polytechnic University of The Philippines Parañaque City Campus", "PhoneTact"],
+["Pepe Team", "Jose Rizal Memorial State University", "Finding Pepe"],
+["Pixel Play", "Gordon College", "Out-Break"],
+["Pretty Cool", "Cebu Institute of Technology - University", "Little Chambers"],
+["Prodigal Developers", "Gordon College", "Orb Defender"],
+["Prodigal Developers", "Gordon College", "Vision"],
+["ProTech", "National University", "Deadline Badges"],
+["ProTech", "National University", "Java Handles"],
+["ProTech", "National University", "Segregation Time"],
+["ProTech", "National University", "Cigarette Watcher"],
+["ProTech", "National University", "Kita"],
+["QCPU - Games of the General", "Quezon City Polytechnic University (QCPU)", "Game of the General"],
+["QCPU - Space Blitz", "Quezon City Polytechnic University (QCPU)", "Space Blitz"],
+["QCPU - Titan Run", "Quezon City Polytechnic University (QCPU)", "Titan Run"],
+["QCPU - Travel Buddy", "Quezon City Polytechnic University (QCPU)", "Travel Buddy"],
+["Quartz", "Our Lady of Fatima University", "Health Alarm"],
+["Roller Coaster", "World Citi Colleges", "WarCrop"],
+["Sashisidroid", "Gordon College", "School Life Simulator"],
+["Source Search", "Our Lady of Fatima University", "Improper and Proper Posture Detection Android Application"],
+["STP Droids", "Polytechnic University of the Philippines (Paranaque Campus)", "Birthday Notifier"],
+["Symmetrix", "De La Salle University - Dasmariñas", "Cavitour"],
+["Syntax Error", "De La Salle University Dasmarinas ", "Balloon Fury"],
+["Team A", "Kolehiyo ng Lungsod ng Lipa", "EzAsPark"],
+["Team Supremo", "Cavite State University - Main", "PlanetDonut VR"],
+["Team Acquiescent", "Lyceum of the Philippines University - Cavite Campus", "Guess What?"],
+["Team AMAer", "AMA Computer College Paranaque Campus", "Road To Forever"],
+["Team Astra", "First Asia Institute of Technology and Humanities", "Body Fight"],
+["team Basic", "University of the Philippines Cebu", "Windmill"],
+["Team Berde.MKA", "STI College Zamboanga", "A Taste of the Philippines"],
+["Team CS&Friends", "STI College Zamboanga", "MyDroid Security"],
+["Team FireBolt", "Cebu Institute of Technology - University", "Q "],
+["Team iFlex", "STI Academic Center - Caloocan", "iFlexBuddy"],
+["Team JR", "Jose Rizal University", "beSafe"],
+["Team Kawaii", "Cebu Institute Technology - University", "GrabATutor!"],
+["Team Mamba", "Polytechnic University of the Philippines", "Klassi"],
+["Team Mamba", "PUP Manila", "Kalmamity"],
+["Team Mamba", "PUP Manila", "Warzone"],
+["Team ON.io", "STI College Zamboanga", "QuoSMS"],
+["Team One", "Kolehiyo ng Lungsod ng LIpa", "MIMI"],
+["Team PNR", "De La Salle University", "Tap Tap Eat"],
+["Team RakOutLoud", "STI College Zamboanga", "My Travel Buddy"],
+["Team Singleton", "De La Salle University-Dasmariñas", "The Ancient Woodland"],
+["Team Whibble", "De La Salle University Manila", "Whibble"],
+["TeamD", "University of the East", "Tea-pop Mobile Ordering System"],
+["Teardrop", "University of the Philippines Cebu", "Flux"],
+["TechHunter", "University of the Cordilleras", "Palengkero"],
+["UCU Knight Coders", "Urdaneta City University", "FoodBot"],
+["UE developer for nature (UEDEvNat)", "University of the East-Manila", "Decarbolabs"],
+["Under Repair", "Ateneo de Zamboanga University", "Daruma"],
+["Under Rizaliano", "Jose Rizal University", "Knowtable"],
+["unITed Programmers ", "Polytechnic University of the Philippines Paranaque City Campus", "Easy-To-Shop"],
+["UPang for Earth", "University of Pangasinan", "OrbitEarth"],
+["UPang GO", "University of Pangasinan", "Sleep In:  Bedspacer's Hub"],
+["UPang GO", "University of Pangasinan", "World of Phantasm"],
+["UPang IoT", "University of Pangasinan", "MARC"],
+["UPang MazeRunners", "University of Pangasinan", "Mystical Maze"],
+["UPang VR", "University of Pangasinan", "Specters VR"],
+["VICASI", "De La Salle University-Dasmarinas", "Elemental Dash"],
+["Wizard Circle - Berner-Lee", "National University", "Study Buddy"],
+["Wizard Circle -Team Gosling", "National University ", "Tornado Rush"],
+["Wizard Circle Team Babbage", "National University", "Croops Tycoon"],
+["Wizard Circle-Team Noorda", "National University", "Brain Games Challenge"],
+["X-Machina", "Cavite State University-Imus Campus", "Remote Solution Application"],
+["X-Machina", "Cavite State University-Imus Campus", "MobileDeviceSecurity"]];
+		$(document).ready(function() {
+			$("#tblTeams").html('<tr class="header"><td>#</td><td>Team Name</td><td>School</td><td>App Name</td></tr>');
+			$.each(teams, function(i, val) {
+				$("#tblTeams").append('<tr><td>'+(i+1)+'</td><td>'+val[0]+'</td><td>'+val[1]+'</td><td>'+val[2]+'</td></tr>')
+			})
+		})
+	</script>
+	<style>
+		#tblTeams tr.header td {
+			font-weight: bold;
+		}
+	</style>
+	<section name="footer">
+		<div class="wrapper">
+			<div class="column-container col-12">
+				<div class="col-6">
+					&copy Android Masters 2016
+				</div>
+				<div class="col-6 right">
+					Powered by <img src="includes/images/gdgph.png">
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+	<script type="text/javascript" src="includes/scripts/script.js"></script>
+</body>
+</html>
