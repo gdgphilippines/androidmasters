@@ -26,7 +26,7 @@
 	<ul>
 		<li><a href="index.html#about">About</a></li>
 		<li><a href="index.html#mechanics">Mechanics</a></li>
-		<li><a href="teams.html">Teams</a></li>
+		<li><a href="entries.html">Entries</a></li>
 		<li><a href="index.html#2015">2015</a></li>
 	</ul>
 	<!-- <a href="https://docs.google.com/forms/d/1SD4kRaOMXm-MI0i1hdfN68SBwL5eKSsrK8CPA5OV_4g/viewform" target="_blank" class="register">Register Team</a> -->
@@ -36,7 +36,7 @@
 	<ul>
 		<li><a href="index.html#about">About</a></li>
 		<li><a href="index.html#mechanics">Mechanics</a></li>
-		<li><a href="teams.html">Teams</a></li>
+		<li><a href="entries.html">Entries</a></li>
 		<li><a href="index.html#2015">2015</a></li>
 	</ul>
 </div>
@@ -53,7 +53,7 @@
 		<div class="wrapper">
 			<div class="column-container col-12">
 				<div class="col-12 center">
-					<span class="title">Teams</span>
+					<span class="title">Entries</span>
 					<p style="font-size: 1.4em; font-weight: 300;">Here are the list of registered teams from what school and their app name.</p>
 				</div>
 			</div>
@@ -61,17 +61,11 @@
 	</section>
 	<section>
 		<div class="wrapper">
-			<div class="column-container col-12">
-				<div class="col-12 center">
-					<table width="100%" cellpadding="12px" id="tblTeams">
-						<tr>
-							<td>1</td>
-							<td>#PRO</td>
-							<td>Gordon College</td>
-							<td>EMA: Election and Monitoring Application</td>
-						</tr>
-					</table>
-				</div>
+			<div class="col-12 center">
+				<table width="100%" cellpadding="12px" id="tblTeams">
+				</table>
+			</div>
+			<div class="column-container col-12" id="ctnTeams">
 			</div>
 		</div>
 	</section>
@@ -269,16 +263,84 @@
 ["Wizard Circle-Team Noorda", "National University", "Brain Games Challenge"],
 ["X-Machina", "Cavite State University-Imus Campus", "Remote Solution Application"],
 ["X-Machina", "Cavite State University-Imus Campus", "MobileDeviceSecurity"]];
-		$(document).ready(function() {
-			$("#tblTeams").html('<tr class="header"><td>#</td><td>Team Name</td><td>School</td><td>App Name</td></tr>');
-			$.each(teams, function(i, val) {
-				$("#tblTeams").append('<tr><td>'+(i+1)+'</td><td>'+val[0]+'</td><td>'+val[1]+'</td><td>'+val[2]+'</td></tr>')
+
+		function resizeTeam() {
+			var maxheight = 0;
+			$("#ctnTeams .col-4").each(function() {
+				$(this).children(".team-list").css("height", "auto");
+				if(maxheight < $(this).children(".team-list").outerHeight())
+					maxheight = $(this).children(".team-list").outerHeight();
 			})
+			$("#ctnTeams .col-4 .team-list").height(maxheight-48);
+		}
+		$(document).ready(function() {
+			// $("#tblTeams").html('<tr class="header"><td>#</td><td>Team Name</td><td>School</td><td>App Name</td></tr>');
+			// $.each(teams, function(i, val) {
+			// 	$("#tblTeams").append('<tr><td>'+(i+1)+'</td><td>'+val[0]+'</td><td>'+val[1]+'</td><td>'+val[2]+'</td></tr>')
+			// })
+			$.each(teams, function(i, val) {
+				$("#ctnTeams").append('<div class="col-4">' +
+					'<div class="team-list">' +
+						'<div class="num">'+(i+1)+'</div>' +
+						'<big>'+val[0]+'</big>' +
+						'<span class="school">'+val[1]+'</span><br>' +
+						'<img src="includes/images/android_app.png">'+ val[2] +
+					'</div>' +
+				'</div>');
+			});
+			resizeTeam();
 		})
+		$(window).resize(function() {
+			resizeTeam();
+		})
+
 	</script>
 	<style>
 		#tblTeams tr.header td {
 			font-weight: bold;
+		}
+		.team-list {
+			margin: 12px;
+			border: 1px solid rgba(0,0,0,.1);
+			box-sizing: border-box;
+			padding: 24px;
+			position: relative;
+			font-size: 13px;
+			border-radius: 2px;
+		}
+		.team-list .num {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			color: white;
+			font-size: 11px;
+			font-weight: bold;
+			padding: 6px 8px;
+			background: #8ec63f;
+		}
+		.team-list span {
+			display: block;
+		}
+		.team-list .school {
+			color: #888;
+			font-size: 13px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		.team-list img {
+			width: 24px;
+			vertical-align: middle;
+			margin-right: 12px;
+		}
+		@media screen and (max-width: 768px) {
+			#ctnTeams .col-4 {
+				width: 50% !important;
+			}
+		}
+		@media screen and (max-width: 425px) {
+			#ctnTeams .col-4 {
+				width: 100% !important;
+			}
 		}
 	</style>
 	<section name="footer">
