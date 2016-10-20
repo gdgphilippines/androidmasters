@@ -16,7 +16,6 @@ function responsive() {
 		$parent.find("#logo").css("margin-right", "30px");
 		$parent.find(".menu").hide();
 	}
-		console.log(logo+label+nav+30 + " > " + ($parent.outerWidth() - $register));
 	$(".container").css("margin-top", $parent.outerHeight());
 	$(".button").each(function() {
 		if($(this).find("i.icon").length == 0) 
