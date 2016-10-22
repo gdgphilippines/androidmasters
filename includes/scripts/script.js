@@ -84,6 +84,7 @@ var DialogBox = {
 
 $(window).resize(function() {
 	responsive();
+	DialogBox.reposition();
 })
 function loadApp(key) {
 	DialogBox.link = apps[key].link;
