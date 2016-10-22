@@ -50,7 +50,7 @@ $(document).ready(function() {
 		$height = 400;
 		$top = ($(window).height()-$height)/2;
 		$left = ($(window).width()-$width)/2;
-		window.open("https://twitter.com/home?status="+DialogBox.link, "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
+		window.open("https://twitter.com/home?status="+DialogBox.link+"%20%23androidmasters%20%23gdg%20%23gdgph", "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
 	})
 	$(document).on("click", "#sharegoogleplus", function() {
 		$width = 500;
