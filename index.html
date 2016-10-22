@@ -202,7 +202,6 @@
 {"team": "Keyboard Cowboys", "name": "Farmer Helper", "link": "https://play.google.com/store/apps/details?id=com.keyboardcowboys.farmerhelper", "category": "Utility / Productivity", "desc": 'An App that help farmers for daily activities.'}
 				];
 				for(var i in apps) {
-					console.log(apps[i]);
 					$("#lstApps").append('<a target="_blank" onclick="loadApp(\''+i+'\')" class="app-list"><img src="includes/images/apps/'+apps[i].name+'.png"><p class="app-name"><span class="clip">'+apps[i].name+'</span><br><small>'+apps[i].team+'<br>'+apps[i].category+'</small></p> </a>')
 				}
 			</script>
