@@ -36,8 +36,67 @@ $(document).ready(function() {
 		$(".slider").animate({
 			"left": "-300px"
 		}, 500);
+	});
+	DialogBox.reposition();
+	$(document).on("click", "#sharefacebook", function() {
+		$width = 500;
+		$height = 400;
+		$top = ($(window).height()-$height)/2;
+		$left = ($(window).width()-$width)/2;
+		window.open("https://www.facebook.com/sharer/sharer.php?u="+DialogBox.link, "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
+	})
+	$(document).on("click", "#sharetwitter", function() {
+		$width = 500;
+		$height = 400;
+		$top = ($(window).height()-$height)/2;
+		$left = ($(window).width()-$width)/2;
+		window.open("https://twitter.com/home?status="+DialogBox.link, "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
+	})
+	$(document).on("click", "#sharegoogleplus", function() {
+		$width = 500;
+		$height = 400;
+		$top = ($(window).height()-$height)/2;
+		$left = ($(window).width()-$width)/2;
+		window.open("https://plus.google.com/share?url="+DialogBox.link, "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
+	});
+	$(".blur").click(function() {
+		$(this).hide();
+		DialogBox.el.hide();
+		$("body").css({
+			"overflow": "auto"
+		})
 	})
 })
+var DialogBox = {
+	el: $(".dialog-box"),
+	link: "",
+	reposition: function() {
+		var height = this.el.outerHeight();
+		var sheight = $(window).height();
+		var width = this.el.outerWidth();
+		var swidth = $(window).width();
+		this.el.css({
+			"top": (sheight-height)/2+"px",
+			"left": (swidth-width)/2+"px"
+		});
+	}
+}
+
 $(window).resize(function() {
 	responsive();
 })
+function loadApp(key) {
+	DialogBox.link = apps[key].link;
+	$(".blur").show();
+	DialogBox.el.show();
+	DialogBox.el.find("table img").attr("src", "includes/images/apps/"+apps[key].name+".png");
+	DialogBox.el.find("#app-name").html(apps[key].name);
+	DialogBox.el.find("#team-name").html(apps[key].team);
+	DialogBox.el.find("#app-category").html(apps[key].category);
+	DialogBox.el.find(".install").attr("href", apps[key].link);
+	DialogBox.el.find("p#desc").html(apps[key].desc);
+	DialogBox.reposition();
+	$("body").css({
+		"overflow": "hidden"
+	})
+}

@@ -124,6 +124,7 @@
 			<style>
 				.app-list {
 					background: white;
+					cursor: pointer;
 					padding: 12px;
 					display: inline-block;
 					max-width: 400px;
@@ -154,54 +155,55 @@
 					white-space: nowrap;
 				}
 				.app-list p {
+					margin: 0;
 					line-height: 100%;
 					padding: 0px;
 				}
 			</style>
 			<script>
 				var apps = [
-				{"team": "Team Supremo", "name": "239", "link": "https://play.google.com/store/apps/details?id=com.TeamSupremo.TwoThreeNine", "category": "Games"},
-{"team": "Formona", "name": "ArchaeocetiVR", "link": "https://play.google.com/store/apps/details?id=com.formonaF.formonaF", "category": "Games"},
-{"team": "Jaguar Tech - Pyxle", "name": "Bagel Rush", "link": "https://play.google.com/store/apps/details?id=com.Fourwings.BagelRush", "category": "Games"},
-{"team": "Team JR", "name": "beSafe", "link": "https://play.google.com/store/apps/details?id=com.jru.pgacuin", "category": "Utility / Productivity"},
-{"team": "Team Astra", "name": "Body Fight", "link": "https://play.google.com/store/apps/details?id=cruz.pasia.magtibay&hl=en", "category": "Games"},
-{"team": "BorroWise", "name": "BorroWise", "link": "https://play.google.com/store/apps/details?id=mobapde.edu.borrowise", "category": "Utility / Productivity"},
-{"team": "Under Repair", "name": "Daruma", "link": "https://play.google.com/store/apps/details?id=com.UnderRepair.Daruma&hl=en", "category": "Games"},
-{"team": "eTeam", "name": "Defense of the Oiland", "link": "https://play.google.com/store/apps/details?id=com.dt.doto", "category": "Games"},
-{"team": "JaguarTechnopedia", "name": "DropLett", "link": "https://play.google.com/store/apps/details?id=com.androidmasters.uc.droplett", "category": "Games"},
-{"team": "JaguarTech Almiwouch", "name": "E-RX", "link": "https://play.google.com/store/apps/details?id=com.almiwouch.erx", "category": "Utility / Productivity"},
-{"team": "VICASI", "name": "Elemental Dash", "link": "https://play.google.com/store/apps/details?id=com.VICASI.ElementalDash", "category": "Games"},
-{"team": "JEWMADEX", "name": "Geito", "link": "https://play.google.com/store/apps/details?id=com.JewMaDex.Geito", "category": "Games"},
-{"team": "GIL Games", "name": "Gigantopus(Destructopus)", "link": "https://play.google.com/store/apps/details?id=com.glmb.gigantopus", "category": "Games"},
-{"team": "DMC_WOLVES", "name": "History Wars", "link": "https://play.google.com/store/apps/details?id=com.MPossibleGames.HistoryWars", "category": "Games"},
-{"team": "Team iFlex", "name": "iFlexBuddy", "link": "https://play.google.com/store/apps/details?id=com.iflexbuddy.christianalex.iflexbuddy", "category": "Utility / Productivity"},
-{"team": "Jaguar Tech - Pyxle", "name": "InstaMath", "link": "https://play.google.com/store/apps/details?id=com.pyxle.instamath", "category": "Utility / Productivity"},
-{"team": "Team Mamba", "name": "Kalmamity", "link": "https://play.google.com/store/apps/details?id=com.kalmamity&hl=en", "category": "Utility / Productivity"},
-{"team": "Hala Napundi", "name": "Lights Out", "link": "https://play.google.com/store/apps/details?id=com.koalition.edu.lightsout", "category": "Games"},
-{"team": "Pretty Cool", "name": "Little Chambers", "link": "https://play.google.com/store/apps/details?id=com.PrettyCool.LittleChambers", "category": "Games"},
-{"team": "Big T", "name": "Loot", "link": "https://play.google.com/store/apps/details?id=tapales.manto.bhuller.loot", "category": "Utility / Productivity"},
-{"team": "UPang IoT", "name": "M.A.R.C (Multiple Appliances Remote Controller)", "link": "https://play.google.com/store/apps/details?id=marcial.marc", "category": "Utility / Productivity"},
-{"team": "El Verde Trio", "name": "medical.ly", "link": "https://play.google.com/store/apps/details?id=edu.usls.coronelgensola.project", "category": "Utility / Productivity"},
-{"team": "UPang MazeRunners", "name": "Mystical Maze", "link": "https://play.google.com/store/apps/details?id=com.uopcitesolutions.MysticalMaze", "category": "Utility / Productivity"},
-{"team": "UCU Knight Coders", "name": "NutriVision", "link": "https://play.google.com/store/apps/details?id=edu.ucuccs.nutrivision", "category": "Utility / Productivity"},
-{"team": "ADB Pro", "name": "Oppah", "link": "https://play.google.com/store/apps/details?id=game.adbpro.oppah", "category": "Games"},
-{"team": "Prodigal Developers", "name": "Orb Defender", "link": "https://play.google.com/store/apps/details?id=com.ProdiG.OrbDefender", "category": "Games"},
-{"team": "UPang for Earth", "name": "OrbitEarth", "link": "https://play.google.com/store/apps/details?id=upang.forearth", "category": "Utility / Productivity"},
-{"team": "TechHunter", "name": "Palengkero", "link": "https://play.google.com/store/apps/details?id=com.palengkero.palengkero", "category": "Utility / Productivity"},
-{"team": "PAM Tech", "name": "Phonetact", "link": "https://play.google.com/store/apps/details?id=com.pam.acer.Phonetact", "category": "Utility / Productivity"},
-{"team": "Team AMAer", "name": "RoadWiZ", "link": "https://play.google.com/store/apps/details?id=tristanRosalesGames.RoadWiZ", "category": "Games"},
-{"team": "UPang VR", "name": "Specters VR", "link": "https://play.google.com/store/apps/details?id=com.age.spectersvr", "category": "Games"},
-{"team": "Team PNR", "name": "Tap Tap Eat", "link": "https://play.google.com/store/apps/details?id=com.edu.dlsu.taptapeat", "category": "Games"},
-{"team": "IT Rocks", "name": "Travel Buddy", "link": "https://play.google.com/store/apps/details?id=krbautista.travelbuddy", "category": "Utility / Productivity"},
-{"team": "Team Whibble", "name": "Whibble", "link": "https://play.google.com/store/apps/details?id=com.edu.dlsu.whibble", "category": "Games"},
-{"team": "teamBasic", "name": "Windmill1", "link": "https://play.google.com/store/apps/details?id=com.theBasic.Windmill1", "category": "Games"},
-{"team": "UPang GO", "name": "World of Phantasm (WoP)", "link": "https://play.google.com/store/apps/details?id=com.Wolftic.AR", "category": "Games"},
-{"team": "X-Machina", "name": "RSA-RemoteSolutionApplication", "link": "https://play.google.com/store/apps/details?id=donnamaevaleriano.remotesolutionapplication", "category": "Utility / Productivity"},
-{"team": "Keyboard Cowboys", "name": "Farmer Helper", "link": "https://play.google.com/store/apps/details?id=com.keyboardcowboys.farmerhelper", "category": "Utility / Productivity"}
+				{"team": "Team Supremo", "name": "239", "link": "https://play.google.com/store/apps/details?id=com.TeamSupremo.TwoThreeNine", "category": "Games", "desc": "A minimalist math arcade game  will challenge your mind under time pressure! Tap into this fast-paced game by Team Supremo."},
+{"team": "Formona", "name": "ArchaeocetiVR", "link": "https://play.google.com/store/apps/details?id=com.formonaF.formonaF", "category": "Games", "desc": 'Virtual Reality game that have gamepad support'},
+{"team": "Jaguar Tech - Pyxle", "name": "Bagel Rush", "link": "https://play.google.com/store/apps/details?id=com.Fourwings.BagelRush", "category": "Games", "desc": 'The application is a game where you serve people food in a different manner. This app tests how fast you can think and act with fast moving objects and resource management at the same time.'},
+{"team": "Team JR", "name": "beSafe", "link": "https://play.google.com/store/apps/details?id=com.jru.pgacuin", "category": "Utility / Productivity", "desc": 'beSafe is an App that will be help the preparedness of each and everyone.It has a features sending SMS to love if you are in a emergency, can Identify the User Location and search the nearest establishment,Call police(911),Wheather forecast to check how the Wheather is going, Weather Map where you can see the part of the area that is raining,windy and the temperature itself.It has also a flashlight tool and feature of what you need to do before,during, and after the natural disaster.'},
+{"team": "Team Astra", "name": "Body Fight", "link": "https://play.google.com/store/apps/details?id=cruz.pasia.magtibay&hl=en", "category": "Games", "desc": 'Healthy living certainly isn’t an iron shield that guarantee against developing CANCER. But in the same way that wearing a helmet and sticking to the road policy are behaviors that reduce your chances of being hurt or killed in a vehicle crash, leading a healthy lifestyle by not smoking and keeping active is about loading the odds in your favor, in some cases very meaningfully. '},
+{"team": "BorroWise", "name": "BorroWise", "link": "https://play.google.com/store/apps/details?id=mobapde.edu.borrowise", "category": "Utility / Productivity", "desc": '"BorroWise is a mobile application that seeks to help its users to track items or money that they have borrowed or lent. By providing the necessary details,BorroWise would remind you about the items or money you have borrowed as well as remind the people whom you lent your items or money to.'},
+{"team": "Under Repair", "name": "Daruma", "link": "https://play.google.com/store/apps/details?id=com.UnderRepair.Daruma&hl=en", "category": "Games", "desc": 'Daruma is a fast-paced action game that boosts spatial skills.<br>It is a fun tilting game that gets harder each time a maze is completed.<br>A wonderful game to spend your casual time with<br>The Goal of the game is to reach the end of a maze to advance to another maze.<br>The mazes gets harder and presents more challenges the more mazes you finish. The game gives you a limited amount of time to solve the mazes. There are gems that can be picked up. The gems either give you more time or turns the light off.'},
+{"team": "eTeam", "name": "Defense of the Oiland", "link": "https://play.google.com/store/apps/details?id=com.dt.doto", "category": "Games", "desc": 'Destroy all incoming island invaders by using the left and right d-pad to move the cannon and use your perfect timing and accuracy to hit it by holding the fire button. The enemies give coin as you destroy them and give 1 point to the score. You can use the coin to purchase more powerful weapon and cool projectiles at the shop. The game also have a achievement system that will give you extra credit when you finish them.'},
+{"team": "JaguarTechnopedia", "name": "DropLett", "link": "https://play.google.com/store/apps/details?id=com.androidmasters.uc.droplett", "category": "Games", "desc": 'DropLett is a word game played on survival mode that employs the gameplay of letters falling from the top of the screen in which the player must maneuver and create words with. DropLett aids in building spelling skills especially among young children and keeping minds sharp.'},
+{"team": "JaguarTech Almiwouch", "name": "E-RX", "link": "https://play.google.com/store/apps/details?id=com.almiwouch.erx", "category": "Utility / Productivity", "desc": 'E-RX is a mobile app that enables doctors and other physicians to send prescription to participating pharmacies using a secured path instead of the traditional way of handwritten prescription which will improve prescription accuracy and legibility, increase patient safety and reduce prescription fabrication.'},
+{"team": "VICASI", "name": "Elemental Dash", "link": "https://play.google.com/store/apps/details?id=com.VICASI.ElementalDash", "category": "Games", "desc": 'Elemental Dash is a 2D side scrolling and endless runner game. It is primarily based on elements. You will encounter elemental enemies along your journey, to defeat them you must determine their elemental weakness and tap them with it. You will also encounter bosses each with unique behaviors and attacks, defeating will reward you powerful abilities.'},
+{"team": "JEWMADEX", "name": "Geito", "link": "https://play.google.com/store/apps/details?id=com.JewMaDex.Geito", "category": "Games", "desc": 'The application is about logic gates. The rule is to correspond your player\'s color to the border using the rule of logic gates. You need to jump in order to change colors. Entering the gate will change the player\'s color, according the the rules.'},
+{"team": "GIL Games", "name": "Gigantopus(Destructopus)", "link": "https://play.google.com/store/apps/details?id=com.glmb.gigantopus", "category": "Games", "desc": ''},
+{"team": "DMC_WOLVES", "name": "History Wars", "link": "https://play.google.com/store/apps/details?id=com.MPossibleGames.HistoryWars", "category": "Games", "desc": 'Tap \'n\' slash as many invaders as you can using your hero\'s weapon and survive the invasion! Prove you’re a true HERO!'},
+{"team": "Team iFlex", "name": "iFlexBuddy", "link": "https://play.google.com/store/apps/details?id=com.iflexbuddy.christianalex.iflexbuddy", "category": "Utility / Productivity", "desc": 'iFlexBuddy is an app for gymgoers who are having problems using Gym equipments. Bringing a gym instructor right at their fingertips. The app provides video tutorials on how to use them, proper execution, and basic instructions to help gymgoers with their struggle inside the gym. It also provides scheduled workout with corresponding tutorial given by a gym instructor.'},
+{"team": "Jaguar Tech - Pyxle", "name": "InstaMath", "link": "https://play.google.com/store/apps/details?id=com.pyxle.instamath", "category": "Utility / Productivity", "desc": 'InstaMath is a mobile application which allows you to take pictures of mathematical equations and allows them to be automatically solved by the program. The application was made intended to help students study.'},
+{"team": "Team Mamba", "name": "Kalmamity", "link": "https://play.google.com/store/apps/details?id=com.kalmamity&hl=en", "category": "Utility / Productivity", "desc": 'Kalmamity is an app to raise awareness by giving the user the ability to give updates from his current location, the app also gives the users the ability to ask help from the people around him with or without internet(through the use of SMS). The nearest rescuer will receive the help request.'},
+{"team": "Hala Napundi", "name": "Lights Out", "link": "https://play.google.com/store/apps/details?id=com.koalition.edu.lightsout", "category": "Games", "desc": 'Lights Out is a challenging memory game that encourages people to save money by turning off the lights.'},
+{"team": "Pretty Cool", "name": "Little Chambers", "link": "https://play.google.com/store/apps/details?id=com.PrettyCool.LittleChambers", "category": "Games", "desc": 'Little Chambers is a casual, arcade game similar to the likes of Flappy Bird or Crossy Road. You play as a cute, little adventurer as he navigates his way through chambers filled with spikes. '},
+{"team": "Big T", "name": "Loot", "link": "https://play.google.com/store/apps/details?id=tapales.manto.bhuller.loot", "category": "Utility / Productivity", "desc": 'Loot is not your ordinary expense tracker. Aside from keeping track of your expenses and savings, Loot can also reward you for your actions. Think of it more like a game, the more you play, the better you get! In this case, the more money you save! Loot is dead simple to use with its clean and simple interface.'},
+{"team": "UPang IoT", "name": "M.A.R.C (Multiple Appliances Remote Controller)", "link": "https://play.google.com/store/apps/details?id=marcial.marc", "category": "Utility / Productivity", "desc": 'M.A.R.C. (Multiple Appliances Remote Controller) is an Internet of Things (IoT) app that enables your Android phone or tablet to connect to your Arduino-driven appliances remotely via Bluetooth or Internet. With M.A.R.C., you can manage your appliances anytime and anywhere, giving you better control of your home or office at all times.'},
+{"team": "El Verde Trio", "name": "medical.ly", "link": "https://play.google.com/store/apps/details?id=edu.usls.coronelgensola.project", "category": "Utility / Productivity", "desc": 'The primary purpose of the app is to remind the user when to take his prescribed medication. People tend to forget when to take their medication and it is usually common among adults. The app also lets the user store his medical information that can be used in times of emergencies.'},
+{"team": "UPang MazeRunners", "name": "Mystical Maze", "link": "https://play.google.com/store/apps/details?id=com.uopcitesolutions.MysticalMaze", "category": "Utility / Productivity", "desc": 'Mystical Maze is an adventure game that challenges you to find the right path to come out of a magical maze that changes from time to time. While solving the maze, you must also find along the way the Key of Mysteries, to unlock the gate at the end of the maze and enter the Lair of Profound Enlightenment.'},
+{"team": "UCU Knight Coders", "name": "NutriVision", "link": "https://play.google.com/store/apps/details?id=edu.ucuccs.nutrivision", "category": "Utility / Productivity", "desc": 'A simple food-photo nutrient analysis application. The app is simple to use. ALl you have to do is to capture or select a photo of foods from your gallery and show you the possible contents of the photo and it will return nutrition facts of these contents.'},
+{"team": "ADB Pro", "name": "Oppah", "link": "https://play.google.com/store/apps/details?id=game.adbpro.oppah", "category": "Games", "desc": 'Discover the world in a fun filled game and learn facts from different places. See how our jelly friend travel across different places such as Egypt, Africa, India and the Philippines in order to fulfill its dreams. Set your foot on different locations per country and discover hidden facts. Discover the musical culture of each place that Oppah goes through. Make sure to make it in time for Oppah’s next flight!'},
+{"team": "Prodigal Developers", "name": "Orb Defender", "link": "https://play.google.com/store/apps/details?id=com.ProdiG.OrbDefender", "category": "Games", "desc": 'Orb Defender is an arcade-platformer game set inside a computer. You are a sphere that consists the last data on the computer and there are virus cubes that are attempting to attack you. Its unique gameplay make the game different and challenging. As time lapses as you play, gameplay gets harder, faster and intense.'},
+{"team": "UPang for Earth", "name": "OrbitEarth", "link": "https://play.google.com/store/apps/details?id=upang.forearth", "category": "Utility / Productivity", "desc": 'OrbitEarth is an app that provides real-time information from people, social media sites (Twitter, Google+, etc.), and reputable sources such as NASA, CNN, and BBC to cause awareness on developments around the world that affect the Earth. Thus, the app requires and internet connection to get the most updated feeds. It also performs simple analytics to determine the public\'s mood or sentiment towards, say, a reported disaster.'},
+{"team": "TechHunter", "name": "Palengkero", "link": "https://play.google.com/store/apps/details?id=com.palengkero.palengkero", "category": "Utility / Productivity", "desc": 'Palengkero is a productivity shopping mobile app for the Philippine public markets. It aims to assist market goers to search for public markets within a specified province, search for stores, products, and prices within the chosen public market, and to locate the store on the Google map. It also aims to aid public market vendors to increase the visibility of their stores/stalls and to easily update their location, product list and prices for the convenience of the customers.'},
+{"team": "PAM Tech", "name": "Phonetact", "link": "https://play.google.com/store/apps/details?id=com.pam.acer.Phonetact", "category": "Utility / Productivity", "desc": 'NFC devices today has built in NFC apps which is used to share files or data with the same brand so with this app you can share your calling card through NFC even if the devices don\'t have the same brand.'},
+{"team": "Team AMAer", "name": "RoadWiZ", "link": "https://play.google.com/store/apps/details?id=tristanRosalesGames.RoadWiZ", "category": "Games", "desc": 'RoadWiZ is an endless runner game where you must overcome different types of obstacle and destruction to prevent the conquest of the world by the villains. As you travel some of the places in the Philippines, you need to save most of the people in the highway especially yourself or else you will die in the hands of scary but crazy bunch of villains. To save them including yourself, you must survive all the threats that made by the ruthless and no mercy enemies.'},
+{"team": "UPang VR", "name": "Specters VR", "link": "https://play.google.com/store/apps/details?id=com.age.spectersvr", "category": "Games", "desc": 'Specters VR challenges you to overcome your fears of the eerie and paranormal by exploring Wright Manor, an abandoned estate haunted by various spirits and phantasmic activities. Be the modern-day ghostbuster amid the creepy apparitions, strange sounds, and unexplained events at the Wright Manor.'},
+{"team": "Team PNR", "name": "Tap Tap Eat", "link": "https://play.google.com/store/apps/details?id=com.edu.dlsu.taptapeat", "category": "Games", "desc": 'Tap Tap Eat is a simple clicker game wherein players tap continuously in order to gain coins, gems and experiences. Coins and Gems can be used to buy new upgrades, power-ups and new dishes while experiences are needed in order for the players to level up and unlock more dishes.'},
+{"team": "IT Rocks", "name": "Travel Buddy", "link": "https://play.google.com/store/apps/details?id=krbautista.travelbuddy", "category": "Utility / Productivity", "desc": 'this app use to find the location of different landmarks such as church, hospital etc. using gps with AR view and google street view'},
+{"team": "Team Whibble", "name": "Whibble", "link": "https://play.google.com/store/apps/details?id=com.edu.dlsu.whibble", "category": "Games", "desc": 'Having trouble picking out a fun game to play with your friends? Whibble is a game where laughter is guaranteed. It is based on the telephone/whisper game but tweaked with drawings and guesses! At the end of the game, everyone gets to see how each player’s drawings and guesses can turn a word into something funny! No drawing skills required! Just have fun and enjoy the unexpected evolutions of the words!'},
+{"team": "teamBasic", "name": "Windmill1", "link": "https://play.google.com/store/apps/details?id=com.theBasic.Windmill1", "category": "Games", "desc": 'Enhance the power of the wind and promote sustainability in this simple and friendly game. Use power ups, earn points, and acquire new amazing blades.'},
+{"team": "UPang GO", "name": "World of Phantasm (WoP)", "link": "https://play.google.com/store/apps/details?id=com.Wolftic.AR", "category": "Games", "desc": 'World of Phatasm is an exciting 3D augmented reality game that lets you discover and eliminate various phantoms and other eerie creatures in your surroundings. The game features multiple stages, each one daring you to survive the onslaught of phantoms. It records the highest score by taking into account how many you’ve eliminated and how long you’ve survived (played) the game.'},
+{"team": "X-Machina", "name": "RSA-RemoteSolutionApplication", "link": "https://play.google.com/store/apps/details?id=donnamaevaleriano.remotesolutionapplication", "category": "Utility / Productivity", "desc": 'This is shipment and store remote application it can be used for managers of the store to know where is the place of ship by using accurate lat and long points. If the manager wants to say anything he, she can send it remotely then it will appear like a notification. Then it will captured a front image for who are reading the message. The manager of store or shipment company can remotely access the device that their register. It can track also the sim card number record.'},
+{"team": "Keyboard Cowboys", "name": "Farmer Helper", "link": "https://play.google.com/store/apps/details?id=com.keyboardcowboys.farmerhelper", "category": "Utility / Productivity", "desc": 'An App that help farmers for daily activities.'}
 				];
 				for(var i in apps) {
 					console.log(apps[i]);
-					$("#lstApps").append('<a target="_blank" href="'+apps[i].link+'" class="app-list"><img src="includes/images/apps/'+apps[i].name+'.png"><p class="app-name"><span class="clip">'+apps[i].name+'</span><br><small>'+apps[i].team+'<br>'+apps[i].category+'</small></p> </a>')
+					$("#lstApps").append('<a target="_blank" onclick="loadApp(\''+i+'\')" class="app-list"><img src="includes/images/apps/'+apps[i].name+'.png"><p class="app-name"><span class="clip">'+apps[i].name+'</span><br><small>'+apps[i].team+'<br>'+apps[i].category+'</small></p> </a>')
 				}
 			</script>
 		</div>
@@ -287,6 +289,102 @@
 		</div>
 	</section>
 </div>
+<div class="blur">
+</div>
+
+	<div class="dialog-box">
+		<table width="100%" cellpadding="8px">
+			<tr valign="top">
+				<td width="1px"><img src="includes/images/apps/239.png"></td>
+				<td><span id="app-name">239</span><span id="team-name">Team Supremo</span><span id="app-category">Category</span></td>
+			</tr>
+			<tr>
+				<td align="right" colspan="2">
+					<a target="_blank" href="#" class="install">Install</a>
+				</td>
+			</tr>
+		</table>
+		<p id="desc">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error debitis esse, deleniti est eos veritatis et tenetur aperiam, enim laudantium totam. Necessitatibus iusto, nesciunt! Blanditiis necessitatibus repellat culpa eaque delectus optio rem in alias debitis. Ducimus placeat a ipsa hic? Odio velit ducimus, assumenda dolores accusantium, perferendis in labore minima?
+		</p>
+		<a id="sharefacebook" class="sm"><img src="includes/images/facebook.png"></a>
+		<a id="sharetwitter" class="sm"><img src="includes/images/twitter.png"></a>
+		<a id="sharegoogleplus" class="sm"><img src="includes/images/google-plus.png"></a>
+	</div>
+<style>
+	.blur {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		background: rgba(255,255,255,.8);
+		z-index: 100;
+		display: none;
+	}
+	.dialog-box {
+		display: none;
+		min-width: 320px;
+		max-width: 560px;
+		background: white;
+		max-height: 80%;
+		box-shadow: 0px 3px 4px rgba(0,0,0,.2);
+		position: fixed;
+		z-index: 101;
+		overflow: hidden;
+		overflow-y: scroll;
+		padding-bottom: 12px;
+	}
+	.dialog-box .wrapper {
+		width: 100%;
+		float: left;
+	}
+	.dialog-box::-webkit-scrollbar {
+		width: 0px;
+	}
+	.dialog-box table img {
+		width: 64px;
+	}
+	.dialog-box table span {
+		display: block;
+		line-height: 150%;
+	}
+	.dialog-box #app-name {
+		font-weight: bold;	
+	}
+	.dialog-box #team-name, .dialog-box #app-category {
+		color: rgba(0,0,0,.7);
+		font-size: 12px;
+	}
+	.dialog-box .install {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 13px;
+		background: #8bc34a;
+		color: white;
+		padding: 8px 12px;
+		border-radius: 2px;
+		margin-bottom: 8px;
+		display: inline-block;
+	}
+	.dialog-box table {
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+	.dialog-box p#desc {
+		padding: 4px 18px;
+		padding-bottom: 18px;
+		font-size: 14px;
+		line-height: 150%;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+	}
+	.dialog-box .sm {
+		cursor: pointer;
+		margin-left: 12px;
+	}
+	.dialog-box .sm img {
+		width: 24px;
+	}
+</style>
 	<script type="text/javascript" src="includes/scripts/script.js"></script>
 </body>
 </html>
