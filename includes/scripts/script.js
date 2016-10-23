@@ -43,7 +43,7 @@ $(document).ready(function() {
 		$height = 400;
 		$top = ($(window).height()-$height)/2;
 		$left = ($(window).width()-$width)/2;
-		window.open("https://www.facebook.com/sharer/sharer.php?u="+DialogBox.link, "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
+		window.open("https://www.facebook.com/sharer/sharer.php?u="+DialogBox.fb, "_blank", "toolbar=no, scrollbars=yes, resizable=no, top="+$top+", left="+$left+", width="+$width+", height="+$height+"");
 	})
 	$(document).on("click", "#sharetwitter", function() {
 		$width = 500;
@@ -87,6 +87,7 @@ $(window).resize(function() {
 	DialogBox.reposition();
 })
 function loadApp(key) {
+	DialogBox.fb = apps[key].fb;
 	DialogBox.link = apps[key].link;
 	$(".blur").show();
 	DialogBox.el.show();
