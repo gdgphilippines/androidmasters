@@ -5824,89 +5824,246 @@ i.icon {
 	display: inline-block;
 	overflow: hidden;
 }
-.col-1 {
-	width: 8.3333% !important;
+[class^="col-"] {
 	float: left;
+}
+.col-1 {
+	width: 8.3333%;
 }
 .col-2 {
-	width: 16.6666% !important;
-	float: left;
+	width: 16.6666%;
 }
 .col-3 {
-	width: 24.9999% !important;
-	float: left;
+	width: 24.9999%;
 }
 .col-4 {
-	width: 33.3332% !important;
-	float: left;
+	width: 33.3332%;
 }
 .col-5 {
-	width: 41.6665% !important;
-	float: left;
+	width: 41.6665%;
 }
 .col-6 {
-	width: 49.9998% !important;
-	float: left;
+	width: 49.9998%;
 }
 .col-7 {
-	width: 58.3331% !important;
-	float: left;
+	width: 58.3331%;
 }
 .col-8 {
-	width: 66.6664% !important;
-	float: left;
+	width: 66.6664%;
 }
 .col-9 {
-	width: 74.9997% !important;
-	float: left;
+	width: 74.9997%;
 }
 .col-10 {
-	width: 83.333% !important;
-	float: left;
+	width: 83.333%;
 }
 .col-11 {
-	width: 91.6663% !important;
-	float: left;
+	width: 91.6663%;
 }
 .col-12 {
-	width: 99.9996% !important;
-	float: left;
+	width: 99.9996%;
 }
 .offset-1 {
-	margin-left: 8.3333% !important;
+	margin-left: 8.3333%;
 }
 .offset-2 {
-	margin-left: 16.6666% !important;
+	margin-left: 16.6666%;
 }
 .offset-3 {
-	margin-left: 24.9999% !important;
+	margin-left: 24.9999%;
 }
 .offset-4 {
-	margin-left: 33.3332% !important;
+	margin-left: 33.3332%;
 }
 .offset-5 {
-	margin-left: 41.6665% !important;
+	margin-left: 41.6665%;
 }
 .offset-6 {
-	margin-left: 49.9998% !important;
+	margin-left: 49.9998%;
 }
 .offset-7 {
-	margin-left: 58.3331% !important;
+	margin-left: 58.3331%;
 }
 .offset-8 {
-	margin-left: 66.6664% !important;
+	margin-left: 66.6664%;
 }
 .offset-9 {
-	margin-left: 74.9997% !important;
+	margin-left: 74.9997%;
 }
 .offset-10 {
-	margin-left: 83.333% !important;
+	margin-left: 83.333%;
 }
 .offset-11 {
-	margin-left: 91.6663% !important;
+	margin-left: 91.6663%;
 }
 .offset-12 {
-	margin-left: 99.9996% !important;
+	margin-left: 99.9996%;
+}
+@media screen and (max-width: 768px) {
+	.t-col-1 {
+		width: 8.3333%;
+	}
+	.t-col-2 {
+		width: 16.6666%;
+	}
+	.t-col-3 {
+		width: 24.9999%;
+	}
+	.t-col-4 {
+		width: 33.3332%;
+	}
+	.t-col-5 {
+		width: 41.6665%;
+	}
+	.t-col-6 {
+		width: 49.9998%;
+	}
+	.t-col-7 {
+		width: 58.3331%;
+	}
+	.t-col-8 {
+		width: 66.6664%;
+	}
+	.t-col-9 {
+		width: 74.9997%;
+	}
+	.t-col-10 {
+		width: 83.333%;
+	}
+	.t-col-11 {
+		width: 91.6663%;
+	}
+	.t-col-12 {
+		width: 99.9996%;
+	}
+	.t-center {
+		text-align: center;
+	}
+	.t-right {
+		text-align: right;
+	}
+	.t-offset-0 {
+		margin-left: 0%;
+	}
+	.t-offset-1 {
+		margin-left: 8.3333%;
+	}
+	.t-offset-2 {
+		margin-left: 16.6666%;
+	}
+	.t-offset-3 {
+		margin-left: 24.9999%;
+	}
+	.t-offset-4 {
+		margin-left: 33.3332%;
+	}
+	.t-offset-5 {
+		margin-left: 41.6665%;
+	}
+	.t-offset-6 {
+		margin-left: 49.9998%;
+	}
+	.t-offset-7 {
+		margin-left: 58.3331%;
+	}
+	.t-offset-8 {
+		margin-left: 66.6664%;
+	}
+	.t-offset-9 {
+		margin-left: 74.9997%;
+	}
+	.t-offset-10 {
+		margin-left: 83.333%;
+	}
+	.t-offset-11 {
+		margin-left: 91.6663%;
+	}
+	.t-offset-12 {
+		margin-left: 99.9996%;
+	}
+}
+@media screen and (max-width: 425px) {
+	.m-col-1 {
+		width: 8.3333%;
+	}
+	.m-col-2 {
+		width: 16.6666%;
+	}
+	.m-col-3 {
+		width: 24.9999%;
+	}
+	.m-col-4 {
+		width: 33.3332%;
+	}
+	.m-col-5 {
+		width: 41.6665%;
+	}
+	.m-col-6 {
+		width: 49.9998%;
+	}
+	.m-col-7 {
+		width: 58.3331%;
+	}
+	.m-col-8 {
+		width: 66.6664%;
+	}
+	.m-col-9 {
+		width: 74.9997%;
+	}
+	.m-col-10 {
+		width: 83.333%;
+	}
+	.m-col-11 {
+		width: 91.6663%;
+	}
+	.m-col-12 {
+		width: 99.9996%;
+	}
+	.m-center {
+		text-align: center;
+	}
+	.m-right {
+		text-align: right;
+	}
+	.m-offset-0 {
+		margin-left: 0%;
+	}
+	.m-offset-1 {
+		margin-left: 8.3333%;
+	}
+	.m-offset-2 {
+		margin-left: 16.6666%;
+	}
+	.m-offset-3 {
+		margin-left: 24.9999%;
+	}
+	.m-offset-4 {
+		margin-left: 33.3332%;
+	}
+	.m-offset-5 {
+		margin-left: 41.6665%;
+	}
+	.m-offset-6 {
+		margin-left: 49.9998%;
+	}
+	.m-offset-7 {
+		margin-left: 58.3331%;
+	}
+	.m-offset-8 {
+		margin-left: 66.6664%;
+	}
+	.m-offset-9 {
+		margin-left: 74.9997%;
+	}
+	.m-offset-10 {
+		margin-left: 83.333%;
+	}
+	.m-offset-11 {
+		margin-left: 91.6663%;
+	}
+	.m-offset-12 {
+		margin-left: 99.9996%;
+	}
 }
 .table {
 	display: table;

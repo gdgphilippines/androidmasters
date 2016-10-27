@@ -62,6 +62,7 @@ $(document).ready(function() {
 	$(".blur").click(function() {
 		$(this).hide();
 		DialogBox.el.hide();
+		$(".speaker-dialog-box").hide();
 		$("body").css({
 			"overflow": "auto"
 		})
@@ -85,6 +86,14 @@ var DialogBox = {
 $(window).resize(function() {
 	responsive();
 	DialogBox.reposition();
+	var height = $(".speaker-dialog-box").outerHeight();
+	var sheight = $(window).height();
+	var width = $(".speaker-dialog-box").outerWidth();
+	var swidth = $(window).width();
+	$(".speaker-dialog-box").css({
+		"top": (sheight-height)/2+"px",
+		"left": (swidth-width)/2+"px"
+	});
 })
 function loadApp(key) {
 	DialogBox.fb = apps[key].fb;
