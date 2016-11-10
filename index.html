@@ -88,33 +88,166 @@
 			</div>
 		</div>
 	</section>
-	<section class="color">
+	<script>
+		var judges = {
+			"neil": {
+				"name": "Neil Patrick Del Gallego",
+				"title": "Game Developer at Playlab",
+				"bio": "Neil has been in the game industry for 5 years under Anino Playlab Inc. (formerly Anino Games), and have released commercial games such as Dragon Cubes, Bubble Cubes and Casino Slots.",
+				"sm": {
+					"fb": "",
+					"tw": "",
+					"gp": "",
+					"li": "",
+					"ws": ""
+				}
+			},
+			"howard": {
+				"name": "Howard Go",
+				"title": "",
+				"bio": "Howard Go is 1/2 of MochiBits, LLC. He's been making games since December 2010 and wears multiple hats. He is most comfortable designing games, increasing retention, and improving monetization.",
+				"sm": {
+					"fb": "",
+					"tw": "",
+					"gp": "",
+					"li": "",
+					"ws": ""
+				}
+			},
+			"dexter": {
+				"name": "Dexter Santos",
+				"title": "Manager at Klab Cyscorpions",
+				"bio": "A licensed Electronics and Communication Engineer, holds a Master of Business Administration degree from University of the Philippines Diliman, and has 8 years work experience in the IT industry. Because of this, has a firm grasp on how to balance the business aspect and technical aspect of tasks. Has wide variety of experiences of being part of, leading, and managing teams and organizations. Has great Project Management Skills and able to manage properly multiple projects at the same time. Able to work productively with other nationalities. Has excellent communication and presentation skills. A fast learner, has great decision-making skills, and values teamwork and team development.",
+				"sm": {
+					"fb": "",
+					"tw": "",
+					"gp": "",
+					"li": "",
+					"ws": ""
+				}
+			},
+			"ely": {
+				"name": "Elymar Apao",
+				"title": "Founder, JumpSparc Inc.",
+				"bio": "Ely is a User Experience & User Centered Design Coach. He is the founder of UsabilityPhilippines.com (which is now called UX Philippines ). He worked as UX manager in a US Nasdaq-listed Top-100 E-Commerce Site (US Auto Parts) and in a Global Classified-Ads Site (OLX). He now focuses on JumpSparc, an educational community and hardware marketplace for the Internet of Things and the maker culture.",
+				"sm": {
+					"fb": "https://www.facebook.com/jozzua",
+					"tw": "",
+					"gp": "https://plus.google.com/+ElymarApao",
+					"li": "https://www.linkedin.com/in/jozzua",
+					"ws": ""
+				}
+			},
+			"alex": {
+				"name": "Alex Alabiso",
+				"title": "Portfolio Development Director at KickStart.ph",
+				"bio": "Alex is Director of Portfolio Development: in-charge of driving market performance and strengthening business and tech architecture of Kickstart-funded startups.<br><br>He has deep experience in tech: 18 years in Web Development, IT and Infrastructure; 10 years management experience in technology; and an expert in enterprise application architecture, development and tech processes.<br><br>But he’s not just a geek! Alex is an old-hat in bridging the gap between geeks and suits as well as applying tech to real-world business problems. He’s no stranger to developing policies and procedure to streamline existing practices from across multiple industries: banking and finance, medical technology, digital print and publishing, social networking/media, and energy/power generation.<br><br>Alex is passionate about helping startups and is an active member of PHP User Group Philippines (PHPUG-PH), R Users Group Philippines, and AWS User Group Philippines.",
+				"sm": {
+					"fb": "",
+					"tw": "",
+					"gp": "",
+					"li": "",
+					"ws": ""
+				}
+			},
+			"anne": {
+				"name": "Anne Michelle Santos",
+				"title": "Product Manager of Globe Labs",
+				"bio": "Anne Michelle Santos is the Product Manager of Globe Labs, an open platform of robust, standard-compliant, and scalable telco-powered APIs. Globe Labs APIs streamline the integration of 3rd-party partners, easily leveraging on telco capabilities namely SMS, voice, location-based services, sponsored access and operator billing.<br><br>Michelle is a former Faculty Member of the University of Santo Tomas - Institute of Information and Computer Studies, with current professional interests in web and mobile application development, and data analytics and visualization.  She has a degree in Bachelor of Information Technology (UST), a Master in Information Technology (ADMU), and currently pursuing a degree in Master in Business Administration in UST - Graduate School.",
+				"sm": {
+					"fb": "",
+					"tw": "",
+					"gp": "",
+					"li": "",
+					"ws": ""
+				}
+			}
+		};
+		function loadJudge(key) {
+			$(".blur").show();
+			$(".speaker-dialog-box").show().scrollTop(0);
+			var judge = judges[key];
+			$(".speaker-dialog-box").html('<img src="includes/images/judges/'+judge.name+'.jpg"><span class="name">'+judge.name+'</span><p>'+judge.bio+'</p>');
+			var height = $(".speaker-dialog-box").outerHeight();
+			var sheight = $(window).height();
+			var width = $(".speaker-dialog-box").outerWidth();
+			var swidth = $(window).width();
+			$(".speaker-dialog-box").css({
+				"top": (sheight-height)/2+"px",
+				"left": (swidth-width)/2+"px"
+			});
+			$("body").css({
+				"overflow": "hidden"
+			})
+		}
+	</script>
+	<section name="judges" class="color">
 		<div class="wrapper">
-			<div class="column-container col-12">
-				<div class="col-12 center">
-					<span class="title">Important Dates</span><br>
-					<table class="dates">
-						<tr>
-							<td>August 31, 2016</td>
-							<td>Deadline of Team Pre-Registration</td>
-						</tr>
-						<tr>
-							<td><s>October 7, 2016</s><br>October 14, 2016</td>
-							<td>Deadline of App Submission</td>
-						</tr>
-						<tr>
-							<td>October 28, 2016</td>
-							<td>Preliminary Judging</td>
-						</tr>
-						<tr>
-							<td>November 19, 2016</td>
-							<td>Android Masters Exhibit and Finals</td>
-						</tr>
-					</table>
-					<!-- <br><br><br>
-					<center><a href="https://docs.google.com/forms/d/1SD4kRaOMXm-MI0i1hdfN68SBwL5eKSsrK8CPA5OV_4g/viewform" target="_blank" class="button">Register Team</a></center><br><br> -->
-				</div>
+			<span class="title">The Finals Judges</span>
+			<center>
+			<br><br>
+			<p>To be updated</p>
+			</center>
+			<!-- <span class="title">Preliminary Judges</span>
+			<center>
+			<br><br>
+			<b style="font-size: 24px;"><img src="includes/images/games.png" style="vertical-align: middle;margin-right: 12px" width="36px">Game Category</b><br>
+			<div class="column-container col-12 judges">
+				<a onclick="loadJudge('neil')" class="col-4 t-col-6 m-col-12">
+					<img src="includes/images/judges/Neil Patrick Del Gallego.jpg" class="profpic">
+					<span>Neil Patrick Del Gallego</span>
+					<img src="includes/images/company/playlab.png" width="100px">
+				</a>
+				<a onclick="loadJudge('howard')" class="col-4 t-col-6 m-col-12">
+					<img src="includes/images/judges/Howard Go.jpg" class="profpic">
+					<span>Howard Go</span>
+					<img src="includes/images/company/mochibits.png" width="170px">
+				</a>
+				<a onclick="loadJudge('dexter')" class="col-4 t-col-6 m-col-12">
+					<img src="includes/images/judges/Dexter Santos.jpg" class="profpic">
+					<span>Dexter Santos</span>
+					<img src="includes/images/company/klab-cyscorpions.png" width="110px">
+				</a>
 			</div>
+			<br><br>
+			<br><br>
+			<b style="font-size: 24px;"><img src="includes/images/utility.png" style="vertical-align: middle;margin-right: 12px" width="36px">Utility/Productivity Category</b><br>
+			<div class="column-container col-12 judges">
+				<a onclick="loadJudge('ely')" class="col-4 t-col-6 m-col-12">
+					<img src="includes/images/judges/Elymar Apao.jpg" class="profpic">
+					<span>Elymar Apao</span>
+					<img src="includes/images/company/jumpsparc.png" width="140px">
+				</a>
+				<a onclick="loadJudge('alex')" class="col-4 t-col-6 m-col-12">
+					<img src="includes/images/judges/Alex Alabiso.jpg" class="profpic">
+					<span>Alex Alabiso</span>
+					<img src="includes/images/company/kickstart.png" width="120px">
+				</a>
+				<a onclick="loadJudge('anne')" class="col-4 t-col-6 m-col-12">
+					<img src="includes/images/judges/Anne Michelle Santos.jpg" class="profpic">
+					<span>Anne Michelle Santos</span>
+					<img src="includes/images/company/globelabs.png" width="100px">
+				</a>
+			</div>
+			</center> -->
+			<style>
+				.judges a {
+					padding-top: 48px;
+					cursor: pointer;
+				}
+				.judges img.profpic {
+					width: 60%;
+					box-shadow: 0px 3px 4px rgba(0,0,0,.2);
+					border-radius: 50%;
+					display: block;
+					margin-bottom: 12px;
+				}
+				.judges span {
+					display: block;
+					margin-bottom: 8px;
+					font-weight: bold;
+				}
+			</style>
 		</div>
 	</section>
 	<section name="apps" style="background: #efefef">
@@ -282,171 +415,10 @@
 			</div>
 		</div>
 	</section> -->
-	<script>
-		var judges = {
-			"neil": {
-				"name": "Neil Patrick Del Gallego",
-				"title": "Game Developer at Playlab",
-				"bio": "Neil has been in the game industry for 5 years under Anino Playlab Inc. (formerly Anino Games), and have released commercial games such as Dragon Cubes, Bubble Cubes and Casino Slots.",
-				"sm": {
-					"fb": "",
-					"tw": "",
-					"gp": "",
-					"li": "",
-					"ws": ""
-				}
-			},
-			"howard": {
-				"name": "Howard Go",
-				"title": "",
-				"bio": "Howard Go is 1/2 of MochiBits, LLC. He's been making games since December 2010 and wears multiple hats. He is most comfortable designing games, increasing retention, and improving monetization.",
-				"sm": {
-					"fb": "",
-					"tw": "",
-					"gp": "",
-					"li": "",
-					"ws": ""
-				}
-			},
-			"dexter": {
-				"name": "Dexter Santos",
-				"title": "Manager at Klab Cyscorpions",
-				"bio": "A licensed Electronics and Communication Engineer, holds a Master of Business Administration degree from University of the Philippines Diliman, and has 8 years work experience in the IT industry. Because of this, has a firm grasp on how to balance the business aspect and technical aspect of tasks. Has wide variety of experiences of being part of, leading, and managing teams and organizations. Has great Project Management Skills and able to manage properly multiple projects at the same time. Able to work productively with other nationalities. Has excellent communication and presentation skills. A fast learner, has great decision-making skills, and values teamwork and team development.",
-				"sm": {
-					"fb": "",
-					"tw": "",
-					"gp": "",
-					"li": "",
-					"ws": ""
-				}
-			},
-			"ely": {
-				"name": "Elymar Apao",
-				"title": "Founder, JumpSparc Inc.",
-				"bio": "Ely is a User Experience & User Centered Design Coach. He is the founder of UsabilityPhilippines.com (which is now called UX Philippines ). He worked as UX manager in a US Nasdaq-listed Top-100 E-Commerce Site (US Auto Parts) and in a Global Classified-Ads Site (OLX). He now focuses on JumpSparc, an educational community and hardware marketplace for the Internet of Things and the maker culture.",
-				"sm": {
-					"fb": "https://www.facebook.com/jozzua",
-					"tw": "",
-					"gp": "https://plus.google.com/+ElymarApao",
-					"li": "https://www.linkedin.com/in/jozzua",
-					"ws": ""
-				}
-			},
-			"alex": {
-				"name": "Alex Alabiso",
-				"title": "Portfolio Development Director at KickStart.ph",
-				"bio": "Alex is Director of Portfolio Development: in-charge of driving market performance and strengthening business and tech architecture of Kickstart-funded startups.<br><br>He has deep experience in tech: 18 years in Web Development, IT and Infrastructure; 10 years management experience in technology; and an expert in enterprise application architecture, development and tech processes.<br><br>But he’s not just a geek! Alex is an old-hat in bridging the gap between geeks and suits as well as applying tech to real-world business problems. He’s no stranger to developing policies and procedure to streamline existing practices from across multiple industries: banking and finance, medical technology, digital print and publishing, social networking/media, and energy/power generation.<br><br>Alex is passionate about helping startups and is an active member of PHP User Group Philippines (PHPUG-PH), R Users Group Philippines, and AWS User Group Philippines.",
-				"sm": {
-					"fb": "",
-					"tw": "",
-					"gp": "",
-					"li": "",
-					"ws": ""
-				}
-			},
-			"anne": {
-				"name": "Anne Michelle Santos",
-				"title": "Product Manager of Globe Labs",
-				"bio": "Anne Michelle Santos is the Product Manager of Globe Labs, an open platform of robust, standard-compliant, and scalable telco-powered APIs. Globe Labs APIs streamline the integration of 3rd-party partners, easily leveraging on telco capabilities namely SMS, voice, location-based services, sponsored access and operator billing.<br><br>Michelle is a former Faculty Member of the University of Santo Tomas - Institute of Information and Computer Studies, with current professional interests in web and mobile application development, and data analytics and visualization.  She has a degree in Bachelor of Information Technology (UST), a Master in Information Technology (ADMU), and currently pursuing a degree in Master in Business Administration in UST - Graduate School.",
-				"sm": {
-					"fb": "",
-					"tw": "",
-					"gp": "",
-					"li": "",
-					"ws": ""
-				}
-			}
-		};
-		function loadJudge(key) {
-			$(".blur").show();
-			$(".speaker-dialog-box").show().scrollTop(0);
-			var judge = judges[key];
-			$(".speaker-dialog-box").html('<img src="includes/images/judges/'+judge.name+'.jpg"><span class="name">'+judge.name+'</span><p>'+judge.bio+'</p>');
-			var height = $(".speaker-dialog-box").outerHeight();
-			var sheight = $(window).height();
-			var width = $(".speaker-dialog-box").outerWidth();
-			var swidth = $(window).width();
-			$(".speaker-dialog-box").css({
-				"top": (sheight-height)/2+"px",
-				"left": (swidth-width)/2+"px"
-			});
-			$("body").css({
-				"overflow": "hidden"
-			})
-		}
-	</script>
-	<section name="judges">
-		<div class="wrapper">
-			<span class="title">The Finals Judges</span>
-			<center>
-			<br><br>
-			<p>To be updated</p>
-			</center>
-			<!-- <span class="title">Preliminary Judges</span>
-			<center>
-			<br><br>
-			<b style="font-size: 24px;"><img src="includes/images/games.png" style="vertical-align: middle;margin-right: 12px" width="36px">Game Category</b><br>
-			<div class="column-container col-12 judges">
-				<a onclick="loadJudge('neil')" class="col-4 t-col-6 m-col-12">
-					<img src="includes/images/judges/Neil Patrick Del Gallego.jpg" class="profpic">
-					<span>Neil Patrick Del Gallego</span>
-					<img src="includes/images/company/playlab.png" width="100px">
-				</a>
-				<a onclick="loadJudge('howard')" class="col-4 t-col-6 m-col-12">
-					<img src="includes/images/judges/Howard Go.jpg" class="profpic">
-					<span>Howard Go</span>
-					<img src="includes/images/company/mochibits.png" width="170px">
-				</a>
-				<a onclick="loadJudge('dexter')" class="col-4 t-col-6 m-col-12">
-					<img src="includes/images/judges/Dexter Santos.jpg" class="profpic">
-					<span>Dexter Santos</span>
-					<img src="includes/images/company/klab-cyscorpions.png" width="110px">
-				</a>
-			</div>
-			<br><br>
-			<br><br>
-			<b style="font-size: 24px;"><img src="includes/images/utility.png" style="vertical-align: middle;margin-right: 12px" width="36px">Utility/Productivity Category</b><br>
-			<div class="column-container col-12 judges">
-				<a onclick="loadJudge('ely')" class="col-4 t-col-6 m-col-12">
-					<img src="includes/images/judges/Elymar Apao.jpg" class="profpic">
-					<span>Elymar Apao</span>
-					<img src="includes/images/company/jumpsparc.png" width="140px">
-				</a>
-				<a onclick="loadJudge('alex')" class="col-4 t-col-6 m-col-12">
-					<img src="includes/images/judges/Alex Alabiso.jpg" class="profpic">
-					<span>Alex Alabiso</span>
-					<img src="includes/images/company/kickstart.png" width="120px">
-				</a>
-				<a onclick="loadJudge('anne')" class="col-4 t-col-6 m-col-12">
-					<img src="includes/images/judges/Anne Michelle Santos.jpg" class="profpic">
-					<span>Anne Michelle Santos</span>
-					<img src="includes/images/company/globelabs.png" width="100px">
-				</a>
-			</div>
-			</center> -->
-			<style>
-				.judges a {
-					padding-top: 48px;
-					cursor: pointer;
-				}
-				.judges img.profpic {
-					width: 60%;
-					box-shadow: 0px 3px 4px rgba(0,0,0,.2);
-					border-radius: 50%;
-					display: block;
-					margin-bottom: 12px;
-				}
-				.judges span {
-					display: block;
-					margin-bottom: 8px;
-					font-weight: bold;
-				}
-			</style>
-		</div>
-	</section>
 	<section name="watch" style="background: #efefef">
 		<div class="wrapper">
 			<span class="title">Watch The Finals!</span>
+			<p style="text-align: center">Happening on November 19, 2016 in Natividad Fajardo Auditorium, De La Salle University, Manila</p>
 		</div>
 		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSck17UY9K2lEg5hm0KtPk2cG8OHP4FvhPz_g4xG_h9wvn0H9g/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 		<style>
