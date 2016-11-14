@@ -73,6 +73,9 @@ a.button {
 			font-weight: bold;
 			margin-top: 12px;
 		}
+		&.team {
+			display: none;
+		}
 		&.score {
 			position: absolute;
 			color: $BASE_COLOR;

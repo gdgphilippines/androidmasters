@@ -66,6 +66,8 @@ a.button {
     .card span.app {
       font-weight: bold;
       margin-top: 12px; }
+    .card span.team {
+      display: none; }
     .card span.score {
       position: absolute;
       color: #8ec63f;
