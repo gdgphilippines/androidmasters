@@ -1,0 +1,109 @@
+$BASE_COLOR: #8ec63f;
+body {
+	background: #f3f3f3;
+}
+.logo {
+	margin-top: 24px;
+	display: block;
+	margin-bottom: 72px;
+}
+.message {
+	font-size: 18px;
+	font-weight: 300;
+	display: block;
+	margin-bottom: 24px;
+}
+a.button {
+	background: $BASE_COLOR;
+	color: white;
+	display: inline-block;
+	padding: 8px 12px;
+	font-weight: bold;
+	border-radius: 1px;
+	box-shadow: 0px 3px 4px rgba(0,0,0,.2);
+	cursor: pointer;
+	display: none;
+	&.submit {
+		margin-top: 24px;
+		clear: both;
+	}
+	&.disabled {
+		background: #e8e8e8;
+		color: rgba(0,0,0,.5);
+	}
+}
+.userpic {
+	width: 36px;
+	margin: 0px 12px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+.vote-content {
+	padding: 48px 0px;
+	overflow: hidden;
+	p {
+		opacity: .75;
+	}
+}
+.card {
+	background: white;
+	border-radius: 1px;
+	box-shadow: 0px 4px 3px rgba(0,0,0,.1);
+	width: 300px;
+	margin: 0px auto;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	cursor: pointer;
+	position: relative;
+	&.selected {
+		background: $BASE_COLOR;
+		color: white;
+	}
+	img	{
+		padding: 12px;
+		vertical-align: middle;
+		float: left;
+	}
+	span {
+		display: block;
+		opacity: .75;
+		&.app {
+			font-weight: bold;
+			margin-top: 12px;
+		}
+		&.score {
+			position: absolute;
+			color: $BASE_COLOR;
+			font-weight: bold;
+			top: 16px;
+			right: 16px;
+			font-size: 36px;
+		}
+	}
+}
+h1 {
+	opacity: .75;
+	font-weight: 300;
+}
+[class^="col-"] {
+	float: left;
+}
+.col-6 {
+	width: 50%;
+}
+span.error_message {
+	clear: both;
+	padding-top: 24px;
+	color: red;
+	display: none;
+}
+@media screen and (max-width: 768px) {
+	.t-col-12 {
+		width: 100%;
+	}
+	.t-margin-top-24 {
+		margin-top: 24px;
+	}
+}
