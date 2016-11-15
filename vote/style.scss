@@ -23,7 +23,7 @@ a.button {
 	box-shadow: 0px 3px 4px rgba(0,0,0,.2);
 	cursor: pointer;
 	display: none;
-	&.submit {
+	&.submit, &.show {
 		margin-top: 24px;
 		clear: both;
 	}
@@ -71,7 +71,6 @@ a.button {
 		}
 		&.team {
 			font-size: 13px;
-			display: none;
 		}
 		&.score {
 			position: absolute;

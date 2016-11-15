@@ -14,11 +14,10 @@ var App = {
 				var game = $("[data-category=game] .card.selected").attr("data-name");
 				var utility = $("[data-category=utility] .card.selected").attr("data-name");
 				if(!(game == null || utility == null)) {
+					App.User.voted = true;
 					App.Firebase.database.ref("users/"+App.User.loggedUser.uid).update({
 						"game": game,
 						"utility": utility
-					}, function() {
-						App.Finalists.loadScore();
 					});
 					$("span.error_message").html("Thank you for voting!").show();
 					$("a.submit").remove();
@@ -29,6 +28,17 @@ var App = {
 	},
 	Count: {
 		ready: function() {
+			$(document).on("click", "a.show", function() {
+				function showAnimate(n) {
+					$("[data-category] .card:nth-child("+n+")").find("img, .app, .team").animate({
+						"opacity": "1"
+					}, 2000, function() {
+						if(n > 1)
+							showAnimate(n-1);
+					});
+				}
+				showAnimate(6);
+			});
 			firebase.initializeApp(App.Firebase.config);
 			firebase.database().ref("users").on("value", function(data) {
 				$("[data-category] a.card").remove();
@@ -53,29 +63,47 @@ var App = {
 				// 	$(".vote-content p").html("Select an app for each category and click Submit at the bottom of this page to vote.");
 				// 	$(".submit").css("display", "inline-block");
 				// }
-				var gameHighest = 0;
-				var utilityHighest = 0;
-				App.Finalists.list.forEach(function(entry) {
+
+
+				function sortApps(apps) {
+					var temp = [];
+					for(var i in apps)
+						temp.push(i);
+					var final = [];
+					for(var i = 0; i < temp.length; i++) {
+						var highest = 0;
+						console.log(temp[i] + " " + apps[temp[i]]);
+						for(var j = 0; j < temp.length; j++) {
+							console.log("\t"+temp[j]+" " + apps[temp[j]]);
+							if(apps[temp[j]] >= apps[temp[highest]])
+								highest = j;
+						}
+						i--;
+						final.push(temp[highest]);
+						temp.splice(highest,1);
+					}
+					return final;
+				}
+				function getAppDetail(appname, key) {
+					var x = "";
+					App.Finalists.list.forEach(function(entry) {
+						if(appname == entry.name)
+							x = entry[key];
+					})
+					return x;
+				}
+				var appsOrdered = sortApps(score);
+
+				appsOrdered.forEach(function(entry) {
 					var container = "[data-category=utility]";
 					var divisor = utilityTotal;
-					if(entry.category == "Games") {
+					if(getAppDetail(entry, "category") == "Games") {
 						container = "[data-category=game]";
 						divisor = gameTotal;
 					}
-					var selected = "";
-					if(score[entry.name] > gameHighest && entry.category == "Games") {
-						$(container).find("a.card").removeClass("selected");
-						selected = " selected"
-						gameHighest = score[entry.name];
-					}
-					if(score[entry.name] > utilityHighest && entry.category == "Utility / Productivity") {
-						$(container).find("a.card").removeClass("selected");
-						selected = " selected"
-						utilityHighest = score[entry.name];
-					}
-					$(container).append('<a data-name="'+entry.name+'" class="card'+selected+'"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span><span class="score">'+((score[entry.name]/divisor)*100).toFixed(2)+'%</span></a>');
+					$(container).append('<a data-name="'+entry+'" class="card"><img src="../includes/images/apps/'+entry+'.png" width="48px"><span class="app">'+entry+'</span><span class="team">'+getAppDetail(entry, "team")+'</span><span class="score">'+((score[entry]/divisor)*100).toFixed(2)+'%</span></a>');
 				});
-				$("span.team").show();
+				$(".card").find("img, .app, .team").css("opacity", "0");
 			})
 		}
 	},
@@ -150,9 +178,6 @@ var App = {
 						selected = " selected";
 					$(container).append('<a data-name="'+entry.name+'" class="card'+ selected +'"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span></a>');
 				});
-				if(data.child("game").exists()) {
-					App.Finalists.loadScore();
-				}
 			});
 		},
 		loadScore: function() {

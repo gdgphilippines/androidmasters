@@ -22,7 +22,7 @@ a.button {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: none; }
-  a.button.submit {
+  a.button.submit, a.button.show {
     margin-top: 24px;
     clear: both; }
   a.button.disabled {
@@ -64,8 +64,7 @@ a.button {
       font-weight: bold;
       margin-top: 12px; }
     .card span.team {
-      font-size: 13px;
-      display: none; }
+      font-size: 13px; }
     .card span.score {
       position: absolute;
       color: #8ec63f;
