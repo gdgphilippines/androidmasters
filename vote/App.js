@@ -17,8 +17,13 @@ var App = {
 					App.Firebase.database.ref("users/"+App.User.loggedUser.uid).update({
 						"game": game,
 						"utility": utility
-					})
-				}
+					}, function() {
+						App.Finalists.loadScore();
+					});
+					$("span.error_message").html("Thank you for voting!").show();
+					$("a.submit").remove();
+				} else
+					$("span.error_message").css("display", "block");
 			}
 		})
 	},
@@ -145,7 +150,9 @@ var App = {
 						selected = " selected";
 					$(container).append('<a data-name="'+entry.name+'" class="card'+ selected +'"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span></a>');
 				});
-				App.Finalists.loadScore();
+				if(data.child("game").exists()) {
+					App.Finalists.loadScore();
+				}
 			});
 		},
 		loadScore: function() {
