@@ -53,9 +53,6 @@ a.button {
   text-align: left;
   cursor: pointer;
   position: relative; }
-  .card.selected {
-    background: #8ec63f;
-    color: white; }
   .card img {
     padding: 12px;
     vertical-align: middle;
@@ -67,14 +64,20 @@ a.button {
       font-weight: bold;
       margin-top: 12px; }
     .card span.team {
+      font-size: 13px;
       display: none; }
     .card span.score {
       position: absolute;
       color: #8ec63f;
       font-weight: bold;
-      top: 16px;
+      top: 26px;
       right: 16px;
-      font-size: 36px; }
+      font-size: 18px; }
+  .card.selected {
+    background: #8ec63f;
+    color: white; }
+    .card.selected span.score {
+      color: white; }
 
 h1 {
   opacity: .75;

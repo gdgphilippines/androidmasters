@@ -24,19 +24,23 @@ var App = {
 	},
 	Count: {
 		ready: function() {
-			var score = {};
-			App.Finalists.list.forEach(function(entry) {
-				score[entry.name] = 0;
-			})
 			firebase.initializeApp(App.Firebase.config);
-			firebase.database().ref("users").once("value", function(data) {
+			firebase.database().ref("users").on("value", function(data) {
+				$("[data-category] a.card").remove();
+				var score = {};
+				App.Finalists.list.forEach(function(entry) {
+					score[entry.name] = 0;
+				})
+				var gameTotal = 0;
+				var utilityTotal = 0;
 				for(var user in data.val()) {
 					var game = data.val()[user].game;
 					var utility = data.val()[user].utility;
 					score[game]++;
 					score[utility]++;
+					gameTotal++;
+					utilityTotal++;
 				}
-				console.log(score);
 				// if(data.child("game").exists()) {
 				// 	App.User.voted = true;
 				// 	$(".vote-content p").html("You have already voted.");
@@ -44,12 +48,29 @@ var App = {
 				// 	$(".vote-content p").html("Select an app for each category and click Submit at the bottom of this page to vote.");
 				// 	$(".submit").css("display", "inline-block");
 				// }
+				var gameHighest = 0;
+				var utilityHighest = 0;
 				App.Finalists.list.forEach(function(entry) {
 					var container = "[data-category=utility]";
-					if(entry.category == "Games")
-						container = "[data-category=game]"
-					$(container).append('<a data-name="'+entry.name+'" class="card"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span><span class="score">'+score[entry.name]+'</span></a>');
+					var divisor = utilityTotal;
+					if(entry.category == "Games") {
+						container = "[data-category=game]";
+						divisor = gameTotal;
+					}
+					var selected = "";
+					if(score[entry.name] > gameHighest && entry.category == "Games") {
+						$(container).find("a.card").removeClass("selected");
+						selected = " selected"
+						gameHighest = score[entry.name];
+					}
+					if(score[entry.name] > utilityHighest && entry.category == "Utility / Productivity") {
+						$(container).find("a.card").removeClass("selected");
+						selected = " selected"
+						utilityHighest = score[entry.name];
+					}
+					$(container).append('<a data-name="'+entry.name+'" class="card'+selected+'"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span><span class="score">'+((score[entry.name]/divisor)*100).toFixed(2)+'%</span></a>');
 				});
+				$("span.team").show();
 			})
 		}
 	},
@@ -124,6 +145,36 @@ var App = {
 						selected = " selected";
 					$(container).append('<a data-name="'+entry.name+'" class="card'+ selected +'"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span></a>');
 				});
+				App.Finalists.loadScore();
+			});
+		},
+		loadScore: function() {
+			App.Firebase.database.ref("users").on("value", function(data) {
+				var score = {};
+				App.Finalists.list.forEach(function(entry) {
+					score[entry.name] = 0;
+				})
+				var gameTotal = 0;
+				var utilityTotal = 0;
+				for(var user in data.val()) {
+					var game = data.val()[user].game;
+					var utility = data.val()[user].utility;
+					score[game]++;
+					score[utility]++;
+					gameTotal++;
+					utilityTotal++;
+				}
+				$("span.team").show();
+				$("[data-name]").each(function() {
+					var appname = $(this).attr("data-name");
+					var divisor = utilityTotal;
+					if($(this).parents("[data-category]").attr("data-category") == "game")
+						divisor = gameTotal;
+					if($(this).children("span.score").length == 0)
+						$(this).append('<span class="score">'+((score[appname]/divisor)*100).toFixed(2)+'%</span>')
+					else
+						$(this).find("span.score").html(((score[appname]/divisor)*100).toFixed(2)+'%')
+				})
 			})
 		},
 		list: [
