@@ -60,6 +60,17 @@ a.button {
   .card span {
     display: block;
     opacity: .75; }
+    .card span.rank-number {
+      background: #8ec63f;
+      opacity: 1;
+      color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      padding: 5px;
+      text-align: center;
+      width: 19px; }
     .card span.app {
       font-weight: bold;
       margin-top: 12px; }
@@ -84,6 +95,9 @@ h1 {
 
 [class^="col-"] {
   float: left; }
+
+.col-12 {
+  width: 100%; }
 
 .col-6 {
   width: 50%; }

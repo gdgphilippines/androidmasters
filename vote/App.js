@@ -4,20 +4,17 @@ var App = {
 		this.Firebase.init();
 		$(document).on("click", "[data-name]", function() {
 			if(!App.User.voted) {
-				var category = $(this).parents("[data-category]").attr("data-category");
-				$("[data-category="+category+"] .card").removeClass("selected");
+				$("[data-category] .card").removeClass("selected");
 				$(this).addClass("selected");
 			}
 		})
 		$(document).on("click", "a.submit", function() {
 			if(!App.User.voted) {
-				var game = $("[data-category=game] .card.selected").attr("data-name");
-				var utility = $("[data-category=utility] .card.selected").attr("data-name");
-				if(!(game == null || utility == null)) {
+				var selected = $(".vote-content .card.selected").attr("data-name");
+				if(!(selected == null)) {
 					App.User.voted = true;
 					App.Firebase.database.ref("users/"+App.User.loggedUser.uid).update({
-						"game": game,
-						"utility": utility
+						"vote": selected
 					});
 					$("span.error_message").html("Thank you for voting!").show();
 					$("a.submit").remove();
@@ -29,15 +26,16 @@ var App = {
 	Count: {
 		ready: function() {
 			$(document).on("click", "a.show", function() {
-				function showAnimate(n) {
-					$("[data-category] .card:nth-child("+n+")").find("img, .app, .team").animate({
-						"opacity": "1"
-					}, 2000, function() {
-						if(n > 1)
-							showAnimate(n-1);
-					});
-				}
-				showAnimate(6);
+				// function showAnimate(n) {
+				// 	$("[data-category] .card:nth-child("+n+")").find("img, .app, .team").animate({
+				// 		"opacity": "1"
+				// 	}, 2000, function() {
+				// 		if(n > 1)
+				// 			showAnimate(n-1);
+				// 	});
+				// }
+				// showAnimate(6);
+				$(".card").find("img, .app, .team").css("opacity", "1");
 			});
 			firebase.initializeApp(App.Firebase.config);
 			firebase.database().ref("users").on("value", function(data) {
@@ -45,16 +43,15 @@ var App = {
 				var score = {};
 				App.Finalists.list.forEach(function(entry) {
 					score[entry.name] = 0;
-				})
-				var gameTotal = 0;
-				var utilityTotal = 0;
+				});
+				var total = 0;
 				for(var user in data.val()) {
-					var game = data.val()[user].game;
-					var utility = data.val()[user].utility;
-					score[game]++;
-					score[utility]++;
-					gameTotal++;
-					utilityTotal++;
+					var vote = data.val()[user].vote;
+					console.log(vote);
+					if(vote != null) {
+						score[vote]++;
+						total++;
+					}
 				}
 				// if(data.child("game").exists()) {
 				// 	App.User.voted = true;
@@ -93,18 +90,20 @@ var App = {
 					})
 					return x;
 				}
+				console.log(score);
 				var appsOrdered = sortApps(score);
-
+				console.log(appsOrdered);
+				var i = 0;
 				appsOrdered.forEach(function(entry) {
-					var container = "[data-category=utility]";
-					var divisor = utilityTotal;
-					if(getAppDetail(entry, "category") == "Games") {
-						container = "[data-category=game]";
-						divisor = gameTotal;
-					}
+					console.log(entry)
+					var container = "[data-column=1]";
+					var divisor = total;
+					if(i > 4)
+						container = "[data-column=2]";
 					if(divisor == 0)
 						divisor = 1;
-					$(container).append('<a data-name="'+entry+'" class="card"><img src="../includes/images/apps/'+entry+'.png" width="48px"><span class="app">'+entry+'</span><span class="team">'+getAppDetail(entry, "team")+'</span><span class="score">'+((score[entry]/divisor)*100).toFixed(2)+'%</span></a>');
+					$(container).append('<a data-name="'+entry+'" class="card"><span class="rank-number">'+(i+1)+'</span><img src="../includes/images/apps/'+entry+'.png" width="48px"><span class="app">'+entry+'</span><span class="team">'+getAppDetail(entry, "team")+'</span><span class="score">'+((score[entry]/divisor)*100).toFixed(2)+'%</span></a>');
+					i++;
 				});
 				$(".card").find("img, .app, .team").css("opacity", "0");
 			})
@@ -169,7 +168,7 @@ var App = {
 					App.User.voted = true;
 					$(".vote-content p").html("You have already voted.");
 				} else {
-					$(".vote-content p").html("Select an app for each category and click Submit at the bottom of this page to vote.");
+					$(".vote-content p").html("Select only <b>one</b> app you think is the best!");
 					$(".submit").css("display", "inline-block");
 				}
 				App.Finalists.list.forEach(function(entry) {
