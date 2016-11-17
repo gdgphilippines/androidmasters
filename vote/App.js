@@ -69,6 +69,7 @@ var App = {
 					var temp = [];
 					for(var i in apps)
 						temp.push(i);
+					temp.reverse();
 					var final = [];
 					for(var i = 0; i < temp.length; i++) {
 						var highest = 0;
@@ -101,6 +102,8 @@ var App = {
 						container = "[data-category=game]";
 						divisor = gameTotal;
 					}
+					if(divisor == 0)
+						divisor = 1;
 					$(container).append('<a data-name="'+entry+'" class="card"><img src="../includes/images/apps/'+entry+'.png" width="48px"><span class="app">'+entry+'</span><span class="team">'+getAppDetail(entry, "team")+'</span><span class="score">'+((score[entry]/divisor)*100).toFixed(2)+'%</span></a>');
 				});
 				$(".card").find("img, .app, .team").css("opacity", "0");
