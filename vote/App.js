@@ -63,7 +63,7 @@ var App = {
 			});
 			firebase.initializeApp(App.Firebase.config);
 			firebase.database().ref("users").on("value", function(data) {
-				$("[data-category] a.card").remove();
+				$("[data-column] a.card").remove();
 				var score = {};
 				App.Finalists.list.forEach(function(entry) {
 					score[entry.name] = 0;
