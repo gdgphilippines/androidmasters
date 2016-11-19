@@ -50,16 +50,20 @@ var App = {
 	Count: {
 		ready: function() {
 			$(document).on("click", "a.show", function() {
-				// function showAnimate(n) {
-				// 	$("[data-category] .card:nth-child("+n+")").find("img, .app, .team").animate({
-				// 		"opacity": "1"
-				// 	}, 2000, function() {
-				// 		if(n > 1)
-				// 			showAnimate(n-1);
-				// 	});
-				// }
-				// showAnimate(6);
-				$(".card").find("img, .app, .team").css("opacity", "1");
+				function showAnimate(n) {
+					console.log(n);
+					var selector = "[data-column=1] .card:nth-child("+n+")";
+					if(n >= 6)
+						selector = "[data-column=2] .card:nth-child("+(n-5)+")";
+					$(selector).find("img, .app, .team").animate({
+						"opacity": "1"
+					}, 2000, function() {
+						if(n > 1)
+							showAnimate(n-1);
+					});
+				}
+				showAnimate(10);
+				// $(".card").find("img, .app, .team").css("opacity", "1");
 			});
 			firebase.initializeApp(App.Firebase.config);
 			firebase.database().ref("users").on("value", function(data) {
