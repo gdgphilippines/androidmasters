@@ -201,7 +201,7 @@ var App = {
 					if(entry.category == "Games")
 						container = "[data-category=game]"
 					var selected = "";
-					if(entry.name == data.val().game || entry.name == data.val().utility) 
+					if(entry.name == data.val().vote) 
 						selected = " selected";
 					$(container).append('<a data-name="'+entry.name+'" class="card'+ selected +'"><img src="../includes/images/apps/'+entry.name+'.png" width="48px"><span class="app">'+entry.name+'</span><span class="team">'+entry.team+'</span></a>');
 				});
