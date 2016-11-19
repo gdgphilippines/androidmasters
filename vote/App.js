@@ -188,7 +188,7 @@ var App = {
 		load: function() {
 			$("[data-category] a.card").remove("");
 			App.Firebase.database.ref("users/"+App.User.loggedUser.uid).once("value", function(data) {
-				if(data.child("game").exists()) {
+				if(data.child("vote").exists()) {
 					App.User.voted = true;
 					$(".vote-content p").html("You have already voted.");
 				} else {
@@ -196,6 +196,7 @@ var App = {
 					$(".submit").css("display", "inline-block");
 				}
 				App.Finalists.list.forEach(function(entry) {
+					console.log(entry);
 					var container = "[data-category=utility]";
 					if(entry.category == "Games")
 						container = "[data-category=game]"
