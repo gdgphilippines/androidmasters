@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Android Masters Vote</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="../includes/scripts/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Android Masters 2016" />
+	<meta property="og:url" content="http://androidmasters.gdgph.org/" />
+	<meta property="og:site_name" content="Android Masters 2016" />
+	<meta property="og:image" content="../includes/images/stage.jpg" />
+	<meta name="twitter:site" content="@gdgphilippines" />
+	<link rel="apple-touch-icon" sizes="180x180" href="../includes/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="../includes/images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../includes/images/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="../includes/images/favicon/manifest.json">
+	<link rel="mask-icon" href="../includes/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="../includes/images/favicon/favicon.ico">
+	<meta name="msapplication-config" content="../includes/images/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#8ec63f">
+</head>
+<body>
+	<center>
+		<img src="../includes/images/logo-large.png" class="logo" width="200px" style="margin-bottom: 0px;">
+		<div class="vote-content">
+			<h1>Congratulations!</h1>
+			<span class="raffle-name">...</span>
+			<a class="show button" style="display: none; clear:both;">I'm Feeling Lucky</a>
+		</div>
+	</center>
+	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+	<script src="App.js"></script>
+	<script>
+	App.Raffle.ready();
+	</script>
+</body>
+</html>

@@ -120,6 +120,12 @@ span.error_message {
 	color: red;
 	display: none;
 }
+span.raffle-name {
+	font-size: 82px;
+	display: block;
+	color: $BASE_COLOR;
+	font-weight: bold;
+}
 @media screen and (max-width: 768px) {
 	.t-col-12 {
 		width: 100%;

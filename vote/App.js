@@ -23,6 +23,28 @@ var App = {
 			}
 		})
 	},
+	Raffle: {
+		userList: [],
+		ready: function() {
+			firebase.initializeApp(App.Firebase.config);
+			firebase.database().ref("users").on("value", function(data) {
+				for(var user in data.val()) {
+					App.Raffle.userList.push(data.val()[user]);
+				}
+				$(".show.button").css("display", "inline-block");
+			})
+			$(document).on("click", ".show.button", function() {
+				var random = Math.floor(Math.random()*App.Raffle.userList.length);
+				$(".raffle-name").animate({
+					"opacity": "0"
+				}, 1000, function() {
+					$(".raffle-name").html(App.Raffle.userList[random].displayName).animate({
+						"opacity": "1"
+					}, 1000);
+				})
+			})
+		}
+	},
 	Count: {
 		ready: function() {
 			$(document).on("click", "a.show", function() {
