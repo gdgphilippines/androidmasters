@@ -48,6 +48,7 @@ var App = {
 		}
 	},
 	Count: {
+		isShown: false,
 		ready: function() {
 			$(document).on("click", "a.show", function() {
 				// function showAnimate(n) {
@@ -64,6 +65,7 @@ var App = {
 				// }
 				// showAnimate(10);
 				$(".card").find("img, .app, .team").css("opacity", "1");
+				App.Count.isShown = true;
 			});
 			firebase.initializeApp(App.Firebase.config);
 			firebase.database().ref("users").on("value", function(data) {
@@ -133,7 +135,8 @@ var App = {
 					$(container).append('<a data-name="'+entry+'" class="card"><span class="rank-number">'+(i+1)+'</span><img src="../includes/images/apps/'+entry+'.png" width="48px"><span class="app">'+entry+'</span><span class="team">'+getAppDetail(entry, "team")+'</span><span class="score">'+((score[entry]/divisor)*100).toFixed(2)+'%</span></a>');
 					i++;
 				});
-				$(".card").find("img, .app, .team").css("opacity", "0");
+				if(!App.Count.isShown)
+					$(".card").find("img, .app, .team").css("opacity", "0");
 			})
 		}
 	},
