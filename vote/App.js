@@ -29,8 +29,10 @@ var App = {
 			firebase.initializeApp(App.Firebase.config);
 			firebase.database().ref("users").on("value", function(data) {
 				for(var user in data.val()) {
-					App.Raffle.userList.push(data.val()[user]);
+					if(data.val()[user].hasOwnProperty("vote"))
+						App.Raffle.userList.push(data.val()[user]);
 				}
+				console.log(App.Raffle.userList);
 				$(".show.button").css("display", "inline-block");
 			})
 			$(document).on("click", ".show.button", function() {
