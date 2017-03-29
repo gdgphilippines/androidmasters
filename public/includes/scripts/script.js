@@ -1,4 +1,7 @@
 var logo, label, nav;
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('./service-worker.js');
+}
 function responsive() {
 	$parent = $(".action-bar");
 	$register = ($parent.children(".register").length == 0) ? 0 : $parent.children(".register").outerWidth();
