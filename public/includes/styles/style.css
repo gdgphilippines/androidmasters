@@ -40,17 +40,23 @@ body > .container section > .wrapper {
   top: 0px;
   left: -300px;
   z-index: 10;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
   background: white; }
 
 .slider .title {
   width: 100%;
   display: block;
   padding: 12px;
+  background: #8ec63f;
+  color: white;
+  padding-bottom: 120px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .slider .back {
   vertical-align: middle;
   margin-right: 10px;
+  cursor: pointer;
+  font-size: 24px;
   display: inline-block; }
 
 .slider ul {
@@ -66,6 +72,8 @@ body > .container section > .wrapper {
 .slider ul li a {
   display: block;
   padding: 18px 18px; }
+  .slider ul li a:hover {
+    background: rgba(0, 0, 0, 0.05); }
 
 .action-bar {
   width: 100%;
@@ -132,7 +140,7 @@ body > .container section > .wrapper {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.7); }
+  background: rgba(255, 255, 255, 0.9); }
 
 section {
   position: relative;
@@ -170,12 +178,12 @@ section[name="footer"] .wrapper {
 
 section[name="footer"] img {
   vertical-align: middle;
-  width: 130px;
   opacity: .5; }
 
 a.button {
   background: #8ec63f;
   color: white;
+  display: inline-block;
   text-transform: uppercase;
   border-radius: 3px;
   padding: 15px 15px 15px 5px;
@@ -186,6 +194,10 @@ a.button {
 section.color a.button {
   background: white;
   color: #8ec63f; }
+
+table.sched tr td:first-child {
+  font-size: 14px;
+  color: gray; }
 
 span.title {
   font-size: 36px;
@@ -249,6 +261,8 @@ ul.mechanics li {
 a.menu {
   opacity: .6;
   vertical-align: middle;
+  cursor: pointer;
+  font-size: 24px;
   display: inline-block;
   margin-right: 10px;
   display: none; }
