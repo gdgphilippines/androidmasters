@@ -53,6 +53,7 @@ a.button {
   overflow: hidden;
   text-align: left;
   cursor: pointer;
+  padding: 24px;
   position: relative; }
   .card img {
     padding: 12px;
@@ -73,8 +74,7 @@ a.button {
       text-align: center;
       width: 19px; }
     .card span.app {
-      font-weight: bold;
-      margin-top: 12px; }
+      font-weight: bold; }
     .card span.team {
       font-size: 13px; }
     .card span.score {

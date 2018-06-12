@@ -1,0 +1,28 @@
+[debug] [2017-11-30T01:28:26.833Z] ----------------------------------------------------------------------
+[debug] [2017-11-30T01:28:26.835Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Juvar\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2017-11-30T01:28:26.836Z] CLI Version:   3.12.0
+[debug] [2017-11-30T01:28:26.836Z] Platform:      win32
+[debug] [2017-11-30T01:28:26.836Z] Node Version:  v6.11.3
+[debug] [2017-11-30T01:28:26.836Z] Time:          Thu Nov 30 2017 09:28:26 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2017-11-30T01:28:26.836Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-30T01:28:26.865Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-30T01:28:26.866Z] > authorizing via signed-in user
+[debug] [2017-11-30T01:28:26.868Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/androidmasters-41945  
+ Thu Nov 30 2017 09:28:26 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2017-11-30T01:28:28.817Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-30T01:28:28.821Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/androidmasters-41945/tokens  
+ Thu Nov 30 2017 09:28:28 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2017-11-30T01:28:30.494Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Juvar\Sites\gdgph.org\androidmasters'...
+[info] 
+[debug] [2017-11-30T01:28:30.508Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/androidmasters-41945  
+ Thu Nov 30 2017 09:28:30 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2017-11-30T01:28:33.613Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-30T01:28:33.614Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/488323458092/clients/_:getWebAppConfig  
+ Thu Nov 30 2017 09:28:33 GMT+0800 (Malay Peninsula Standard Time)
+[debug] [2017-11-30T01:28:39.955Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

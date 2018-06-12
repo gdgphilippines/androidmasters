@@ -57,6 +57,7 @@ a.button {
 	overflow: hidden;
 	text-align: left;
 	cursor: pointer;
+	padding: 24px;
 	position: relative;
 	img	{
 		padding: 12px;
@@ -80,7 +81,6 @@ a.button {
 		}
 		&.app {
 			font-weight: bold;
-			margin-top: 12px;
 		}
 		&.team {
 			font-size: 13px;
