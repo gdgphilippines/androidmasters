@@ -1,5 +1,3 @@
-use strict;
-
 var logo, label, nav;
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('./service-worker.js');
@@ -105,7 +103,7 @@ $(window).resize(function() {
 	});
 })
 function loadApp(key) {
-	DialogBox.fb = apps[key].fb;
+	// DialogBox.fb = apps[key].fb;
 	DialogBox.link = apps[key].link;
 	$(".blur").show();
 	DialogBox.el.show();
@@ -114,7 +112,7 @@ function loadApp(key) {
 	DialogBox.el.find("#team-name").html(apps[key].team);
 	DialogBox.el.find("#app-category").html(apps[key].category);
 	DialogBox.el.find(".install").attr("href", apps[key].link);
-	DialogBox.el.find("p#desc").html(apps[key].desc);
+	// DialogBox.el.find("p#desc").html(apps[key].desc);
 	DialogBox.reposition();
 	$("body").css({
 		"overflow": "hidden"
