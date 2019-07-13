@@ -1,0 +1,25 @@
+[debug] [2019-07-13T12:20:19.707Z] ----------------------------------------------------------------------
+[debug] [2019-07-13T12:20:19.710Z] Command:       /Users/tjmonsi/.nvm/versions/node/v10.15.3/bin/node /Users/tjmonsi/.nvm/versions/node/v10.15.3/bin/firebase deploy --only hosting
+[debug] [2019-07-13T12:20:19.711Z] CLI Version:   7.0.2
+[debug] [2019-07-13T12:20:19.711Z] Platform:      darwin
+[debug] [2019-07-13T12:20:19.711Z] Node Version:  v10.15.3
+[debug] [2019-07-13T12:20:19.712Z] Time:          Sat Jul 13 2019 21:20:19 GMT+0900 (Korean Standard Time)
+[debug] [2019-07-13T12:20:19.712Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-13T12:20:19.731Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-13T12:20:19.731Z] > authorizing via signed-in user
+[debug] [2019-07-13T12:20:19.731Z] [iam] checking project androidmasters-41945 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-07-13T12:20:19.733Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/androidmasters-41945:testIamPermissions  
+
+[debug] [2019-07-13T12:20:22.061Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-13T12:20:22.066Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/androidmasters-41945  
+ 
+[debug] [2019-07-13T12:20:23.388Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'androidmasters-41945'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-07-13T12:20:25.064Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/androidmasters-41945/versions  
+
